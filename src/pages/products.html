@@ -1,0 +1,170 @@
+---
+nav: products
+title: Seat covers and accessories for your car | Hexstitch
+description: Made-to-measure seat covers, steering wraps, floor mats and cabin accessories cut on your car's own pattern. Filter by category, material, pattern and price.
+---
+<section class="title-band pr-band" aria-labelledby="pr-title">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Products</span></nav>
+    <div class="pr-titlebar">
+      <h1 id="pr-title"><span data-pr-h1>Made for your car</span></h1>
+      <div class="pr-car card" data-pr-carcard>
+        <div class="pr-car-text">
+          <p class="pr-car-eyebrow">Your car</p>
+          <p class="pr-car-name" data-pr-carname>Not picked yet</p>
+        </div>
+        <span class="badge badge--green" data-pr-carbadge hidden>Pattern on file</span>
+        <button class="btn btn-secondary btn-sm pr-change" type="button" data-pr-change>Pick your car</button>
+      </div>
+      <div class="pr-car-mobile" data-pr-carmobile>
+        <p><span class="pr-ok" aria-hidden="true">✓</span> <span data-pr-carmobile-text>Pick your car for an exact fit</span></p>
+        <button class="linklike pr-change-m" type="button" data-pr-change>Change</button>
+      </div>
+      <button class="btn btn-secondary pr-change-np" type="button" data-pr-change hidden>Change car</button>
+    </div>
+  </div>
+</section>
+
+<!-- catalogue (car with a pattern on file, or no car yet) -->
+<section class="section section--flush-top pr-catalog" data-pr-catalog aria-label="Products">
+  <div class="container pr-layout">
+    <aside class="pr-side" aria-label="Filters">
+      <div class="pr-filter-home" data-pr-filter-home>
+        <form class="pr-filters card" data-pr-filters aria-labelledby="flt-title" data-validate data-no-reset novalidate>
+          <div class="pf-head">
+            <h2 class="pf-title" id="flt-title">Filters</h2>
+            <button class="linklike pf-clear" type="button" data-pr-clear>Clear all</button>
+          </div>
+          <fieldset class="pf-group" data-pf-group="category"><legend>Category</legend><div class="pf-list" data-pf-list="category"></div></fieldset>
+          <fieldset class="pf-group" data-pf-group="material"><legend>Material</legend><div class="pf-list" data-pf-list="material"></div></fieldset>
+          <fieldset class="pf-group" data-pf-group="pattern"><legend>Pattern</legend><div class="pf-list" data-pf-list="pattern"></div></fieldset>
+          <fieldset class="pf-group pf-price"><legend>Price<span class="pf-price-sum" data-pf-price-sum> · ₹1,000 – ₹13,000</span></legend>
+            <div class="range2" data-range2>
+              <span class="range2-track" aria-hidden="true"><span class="range2-fill" data-range-fill></span></span>
+              <input type="range" min="1000" max="13000" step="100" value="1000" data-range-min aria-label="Minimum price">
+              <input type="range" min="1000" max="13000" step="100" value="13000" data-range-max aria-label="Maximum price">
+            </div>
+            <p class="pf-price-row"><span data-range-min-label>₹1,000</span><span data-range-max-label>₹13,000</span></p>
+          </fieldset>
+        </form>
+      </div>
+    </aside>
+
+    <div class="pr-main">
+      <div class="pr-toolbar">
+        <div class="pr-active" data-pr-active aria-label="Active filters"></div>
+        <p class="pr-count" aria-live="polite"><span data-pr-count>11</span> products</p>
+        <label class="pr-sort"><span>Sort</span>
+          <select data-pr-sort aria-label="Sort products">
+            <option value="booked">Most booked</option>
+            <option value="rating">Top rated</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="pr-mobilebar">
+        <button class="btn btn-secondary" type="button" data-pr-open-filters>Filters<span data-pr-fcount></span></button>
+        <label class="pr-sort-m btn btn-secondary"><span data-pr-sort-label>Sort: Most booked</span>
+          <select data-pr-sort-m aria-label="Sort products">
+            <option value="booked">Most booked</option>
+            <option value="rating">Top rated</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+      <div class="pr-catchips" role="group" aria-label="Category" data-pr-catchips>
+        <button class="chip" type="button" data-cat="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-cat="seat-covers" aria-pressed="false">Seat covers</button>
+        <button class="chip" type="button" data-cat="steering" aria-pressed="false">Steering</button>
+        <button class="chip" type="button" data-cat="floor-mats" aria-pressed="false">Mats</button>
+        <button class="chip" type="button" data-cat="accessories" aria-pressed="false">Lighting</button>
+      </div>
+      <p class="pr-count-m" aria-hidden="true"><span data-pr-count-m>11</span> products</p>
+
+      <div class="pr-grid-wrap" id="grid">
+        {{product_cards all}}
+        <article class="custom-card" data-custom-card>
+          <h3 class="cc-title">Want something custom?</h3>
+          <p>Two-tone, embroidered logos or a pattern we don't list. We'll quote it.</p>
+          <a class="link link-amber" href="quote.html">Ask the studio {{icon arrow 16}}</a>
+        </article>
+        <div class="pr-empty card" data-pr-empty hidden>
+          <h3>No products match these filters</h3>
+          <p>Try a wider price range or fewer materials. Or tell us what you have in mind and we will quote it.</p>
+          <button class="btn btn-dark btn-sm" type="button" data-pr-clear>Clear all filters</button>
+        </div>
+      </div>
+      <div class="pr-more">
+        <button class="btn btn-secondary btn-lg pr-more-btn" type="button" data-pr-more hidden>Show more</button>
+        <p class="pr-showing" data-pr-showing>Showing 11 of 11</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- no pattern on file (PDF 18) -->
+<section class="section section--flush-top pr-nopattern" data-pr-nopattern hidden aria-labelledby="np-title">
+  <div class="container np-layout">
+    <div class="np-card">
+      <span class="np-pill">No pattern on file yet</span>
+      <h2 id="np-title">We'll make a template from your seats.</h2>
+      <p>Bring the car to the studio for about 45 minutes. We trace each seat panel, then cut your set from that template. It adds one working day.</p>
+      <form class="np-form" data-validate data-no-reset novalidate data-np-form>
+        <div class="field"><label for="np-name">Name</label><input id="np-name" name="name" type="text" autocomplete="name" placeholder="Your name" required></div>
+        <div class="field"><label for="np-phone">Mobile</label><input id="np-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number" required></div>
+        <div class="field np-submit"><button class="btn btn-primary btn-lg" type="submit">Book template visit</button></div>
+      </form>
+      <div class="np-done" data-np-done hidden role="status">
+        <span class="done-icon" aria-hidden="true">{{icon check 26}}</span>
+        <div><strong>Template visit requested.</strong><p>We will call <span data-np-who>you</span> within one working day to fix a 45-minute slot.</p></div>
+      </div>
+    </div>
+    <div class="np-list card">
+      <h2 class="np-list-title">These still fit your <span data-np-model>car</span> today</h2>
+      <ul class="np-rows" data-np-rows></ul>
+    </div>
+  </div>
+</section>
+
+<!-- quick view (PDF 19) -->
+<div class="modal" id="quickView" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog qv-dialog" role="dialog" aria-modal="true" aria-labelledby="qv-title" tabindex="-1">
+    <div class="qv-media">
+      <div class="qv-main" data-qv-main></div>
+      <div class="qv-thumbs" data-qv-thumbs></div>
+    </div>
+    <div class="qv-body">
+      <button class="modal-x qv-x" type="button" data-modal-close aria-label="Close">{{icon close 16}}</button>
+      <p class="qv-meta" data-qv-meta></p>
+      <h2 class="qv-title" id="qv-title" data-qv-title></h2>
+      <p class="qv-price"><strong data-qv-price></strong> <span data-qv-rating></span></p>
+      <p class="fit-note" data-qv-fit></p>
+      <form class="qv-form" data-qv-form data-validate data-no-reset novalidate>
+        <fieldset class="pd-field"><legend>Colour · <span data-qv-colour></span></legend><div class="swatch-row" data-qv-swatches></div></fieldset>
+        <fieldset class="pd-field" data-qv-thread-wrap><legend>Thread</legend><div class="chip-row" data-qv-threads></div></fieldset>
+      </form>
+      <div class="qv-actions">
+        <a class="btn btn-primary btn-lg" href="quote.html" data-qv-quote>Get a quote for this</a>
+        <a class="btn btn-secondary btn-lg" href="products.html" data-qv-page>Full details</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- mobile filter sheet (PDF 52): the sidebar form moves in here while open -->
+<div class="modal pr-sheet" id="filterSheet" hidden>
+  <div class="modal-backdrop" data-modal-close></div>
+  <div class="modal-dialog pr-sheet-dialog" role="dialog" aria-modal="true" aria-label="Filters" tabindex="-1">
+    <div class="pr-sheet-head">
+      <button class="modal-x" type="button" data-modal-close aria-label="Close filters">{{icon close 16}}</button>
+      <p class="pr-sheet-title">Filters</p>
+      <button class="linklike pf-clear" type="button" data-pr-clear>Clear all</button>
+    </div>
+    <div class="pr-sheet-body" data-pr-sheet-body></div>
+    <div class="pr-sheet-foot"><button class="btn btn-primary btn-lg btn-block" type="button" data-pr-sheet-apply>Show 11 products</button></div>
+  </div>
+</div>

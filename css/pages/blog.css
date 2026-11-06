@@ -1,0 +1,38 @@
+/* blog listing */
+.blog-toolbar { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
+.blog-count { color: var(--muted); font-size: .92rem; margin-top: 6px; }
+.blog-chips { justify-content: flex-end; }
+.blog-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.blog-card h3 a { color: var(--text); }
+.blog-card h3 a:hover { color: var(--amber-ink); }
+.blog-card h3 a:focus-visible { outline: none; }
+.blog-card:has(h3 a:focus-visible) { outline: 3px solid var(--amber); outline-offset: 3px; }
+/* level rows: cover / tags+title / excerpt / byline */
+.blog-grid--level { grid-auto-rows: auto; }
+.blog-grid--level > .blog-card { grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; }
+.blog-grid--level > .blog-card[hidden] { display: none; }
+/* featured */
+.blog-feature-wrap { margin-bottom: 24px; }
+.blog-feature-wrap[hidden] { display: none; }
+.blog-card--feature { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-rows: 1fr auto auto 1fr; column-gap: 8px; }
+.blog-card--feature .blog-cover { grid-column: 1; grid-row: 1 / -1; height: 100%; min-height: 360px; aspect-ratio: auto; }
+.blog-card--feature .blog-card-body { grid-column: 2; grid-row: 2; padding: 32px 32px 0; align-self: end; }
+.blog-card--feature h3 { font-size: clamp(1.5rem, 1.1rem + 1.2vw, 2.1rem); line-height: 1.15; }
+.blog-card--feature .excerpt { grid-column: 2; grid-row: 3; padding: 14px 32px 0; font-size: 1.02rem; }
+.blog-card--feature .byline { grid-column: 2; grid-row: 4; align-self: start; padding: 22px 32px 32px; }
+.blog-news { align-items: center; }
+.blog-news h2 { max-width: 18ch; }
+.news-form { display: grid; gap: 14px; background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .12); border-radius: var(--r-lg); padding: 22px; }
+.news-form label { color: #fff; }
+.news-form .field-error { color: #FF9C93; }
+@media (max-width: 1023px) {
+  .blog-chips { justify-content: flex-start; }
+}
+@media (max-width: 767px) {
+  .blog-card--feature { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .blog-card--feature .blog-cover, .blog-card--feature .blog-card-body, .blog-card--feature .excerpt, .blog-card--feature .byline { grid-column: 1; grid-row: auto; }
+  .blog-card--feature .blog-cover { min-height: 0; aspect-ratio: 3 / 2; height: auto; }
+  .blog-card--feature .blog-card-body { padding: 20px 22px 0; }
+  .blog-card--feature .excerpt { padding: 10px 22px 0; }
+  .blog-card--feature .byline { padding: 18px 22px 22px; }
+}

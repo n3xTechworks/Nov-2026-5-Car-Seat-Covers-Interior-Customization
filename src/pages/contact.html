@@ -1,0 +1,113 @@
+---
+nav: contact
+title: Contact the studio | Hexstitch
+description: Call, WhatsApp, email or visit the Hexstitch studio on Avinashi Road, Coimbatore. Send a message and we reply within one working day.
+hero: hero-contact
+hero_alt: A car parked in the Hexstitch fitting bay at the Peelamedu studio
+crumbs: Contact
+h1: Talk to the studio.
+lead: Mon–Sat, 9:30 am – 7:30 pm. Replies within one working day.
+---
+<section class="contact-cards-wrap" aria-label="Ways to reach us">
+  <div class="container">
+    <div class="contact-cards">
+      <button class="contact-card contact-card--amber" type="button" data-modal-open="callbackModal">
+        <span class="cc-label">Call</span>
+        <span class="cc-value ltr-num">+91 98765 43210</span>
+        <span class="cc-sub">Or request a callback</span>
+      </button>
+      <a class="contact-card" href="https://wa.me/919876543210?text=Hi%20Hexstitch%2C%20I%20have%20a%20question" target="_blank" rel="noopener">
+        <span class="cc-label">WhatsApp</span>
+        <span class="cc-value">Chat with us</span>
+        <span class="cc-sub">Photos welcome</span>
+      </a>
+      <a class="contact-card" href="mailto:hello@hexstitch.in">
+        <span class="cc-label">Email</span>
+        <span class="cc-value cc-value--email">hello@hexstitch.in</span>
+        <span class="cc-sub">Quotes and invoices</span>
+      </a>
+      <a class="contact-card" href="home-2.html#book">
+        <span class="cc-label">Visit</span>
+        <span class="cc-value">Book a studio slot</span>
+        <span class="cc-sub">Free design session</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-main" id="message" aria-labelledby="msg-title">
+  <div class="container contact-grid">
+    <div class="map-card" id="map">
+      <div class="map-frame">
+        <iframe title="Map showing the Hexstitch studio at 142 Avinashi Road, Peelamedu, Coimbatore" src="https://maps.google.com/maps?q=142%20Avinashi%20Road%2C%20Peelamedu%2C%20Coimbatore%20641004&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="map-foot">
+        <div class="map-address">
+          <span class="map-pin" aria-hidden="true">{{icon pin 20}}</span>
+          <div>
+            <p class="map-line"><strong>142 Avinashi Road, Peelamedu</strong></p>
+            <p class="map-sub">Coimbatore 641004 · free parking for 6 cars</p>
+          </div>
+        </div>
+        <a class="btn btn-secondary btn-sm" href="https://www.google.com/maps/search/?api=1&amp;query=142+Avinashi+Road+Peelamedu+Coimbatore+641004" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <ul class="map-facts">
+        <li>{{icon clock 18}}<span>Mon–Sat · 9:30 am – 7:30 pm · Sunday closed</span></li>
+        <li>{{icon car 18}}<span>5 minutes from Fun Mall, opposite PSG Tech gate 2</span></li>
+      </ul>
+    </div>
+
+    <div class="msg-card">
+      <div data-msg-form-wrap>
+        <h2 id="msg-title" class="msg-title">Send a message</h2>
+        <p class="msg-intro">Ask about a fit, a material or an existing job. For a priced quote, the <a class="link-amber" href="quote.html">quote form</a> is quicker.</p>
+        <form class="form-grid msg-form" id="contactForm" data-validate novalidate>
+          <div class="field"><label for="c-name">Full name <span aria-hidden="true">*</span></label><input id="c-name" name="name" type="text" autocomplete="name" placeholder="e.g. Meena S" required></div>
+          <div class="field"><label for="c-phone">Mobile <span aria-hidden="true">*</span></label><input id="c-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10-digit mobile number" required></div>
+          <div class="field span-2"><label for="c-email">Email <span aria-hidden="true">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" placeholder="name@gmail.com" required></div>
+          <div class="field span-2"><label for="c-topic">Topic</label>
+            <select id="c-topic" name="topic">
+              <option>Seat covers for my car</option>
+              <option>Full cabin makeover</option>
+              <option>Steering wrap, mats or accessories</option>
+              <option>Warranty or repair</option>
+              <option>Fleet pricing (5+ cars)</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field span-2"><label for="c-message">Message</label><textarea id="c-message" name="message" rows="4" placeholder="Your car, what you want to change, or the question on your mind"></textarea></div>
+          <div class="span-2"><button class="btn btn-primary btn-block btn-lg" type="submit">Send message</button></div>
+          <p class="form-note span-2">We only use your details to reply. See our <a class="link-amber" href="privacy.html">privacy policy</a>.</p>
+        </form>
+      </div>
+      <div class="done-state msg-done" data-msg-done hidden>
+        <span class="done-icon" aria-hidden="true">{{icon check 28}}</span>
+        <h2 class="msg-title" tabindex="-1" data-msg-done-title>Message sent.</h2>
+        <p data-msg-done-text>We reply within one working day.</p>
+        <p class="badge badge--light" data-msg-ref>Reference HX-M-1000</p>
+        <button class="btn btn-secondary" type="button" data-msg-again>Send another message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush-top" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <header class="intro intro--center">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-title">Questions before booking</h2>
+      <p>Still unsure? <button class="linklike faq-cb" type="button" data-modal-open="callbackModal">Request a callback</button></p>
+    </header>
+    <div class="faq">
+      <div class="faq-list">
+        <details class="faq-item" name="contact-faq" open><summary>How long does fitting take?</summary><div class="faq-answer"><p>3–4 hours for a 5-seater and up to 6 hours for a 7-seater. Full cabin makeovers take one to two days. Wait in the lounge or use free pick-up within city limits.</p></div></details>
+        <details class="faq-item" name="contact-faq"><summary>Will seat covers block my side airbags?</summary><div class="faq-answer"><p>No. Every pattern for a car with seat-mounted airbags has a tear-away seam sewn with low-strength thread exactly over the factory seam, plus an airbag label. Read <a class="link-amber" href="blog-post-2.html">how airbag-safe covers work</a>.</p></div></details>
+        <details class="faq-item" name="contact-faq"><summary>Do you have a pattern for my car?</summary><div class="faq-answer"><p>We hold patterns for 180+ models sold in India since 2015. Pick your car in the <button class="linklike" type="button" data-car-open data-car-stay>car selector</button>; if we don't have it yet, we make a template at your home or office for free.</p></div></details>
+        <details class="faq-item" name="contact-faq"><summary>Which material is best for Coimbatore weather?</summary><div class="faq-answer"><p>For cars parked outdoors, perforated leatherette or breathable fabric stay cooler than solid leather. Nappa leather suits covered parking. Our <a class="link-amber" href="blog-post-1.html">material guide</a> compares all four.</p></div></details>
+        <details class="faq-item" name="contact-faq"><summary>What does the warranty cover?</summary><div class="faq-answer"><p>Two years on every stitch: seams, zips, elastic and fit. Cuts from sharp objects, burns and covers refitted by someone else are not covered. Details are on the <a class="link-amber" href="warranty.html">warranty page</a>.</p></div></details>
+        <details class="faq-item" name="contact-faq"><summary>Do I need to pay an advance?</summary><div class="faq-answer"><p>No advance for seat covers: you pay after fitting. Full cabin makeovers need a 30% advance to order materials.</p></div></details>
+        <details class="faq-item" name="contact-faq"><summary>Can you fit at my home or office?</summary><div class="faq-answer"><p>Template visits happen at your place. Fitting is done at the studio, where we have the tools and lighting to do it right, with free pick-up and drop within Coimbatore city limits.</p></div></details>
+      </div>
+    </div>
+  </div>
+</section>

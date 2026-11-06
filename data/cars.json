@@ -1,0 +1,937 @@
+{
+ "_note": "Car catalogue for the car selector. slug of a car = <brand>-<model>-<year>. pattern=false means no seat template on file yet (template visit needed). models = count shown on the brand card (we list our most-fitted models).",
+ "brands": [
+  {
+   "slug": "maruti",
+   "name": "Maruti Suzuki",
+   "modelCount": 24,
+   "models": [
+    {
+     "slug": "swift",
+     "name": "Swift",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "baleno",
+     "name": "Baleno",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "dzire",
+     "name": "Dzire",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "brezza",
+     "name": "Brezza",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "ertiga",
+     "name": "Ertiga",
+     "body": "MPV",
+     "seats": "7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "xl6",
+     "name": "XL6",
+     "body": "MPV",
+     "seats": "6",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "grand-vitara",
+     "name": "Grand Vitara",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "fronx",
+     "name": "Fronx",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "wagon-r",
+     "name": "Wagon R",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "invicto",
+     "name": "Invicto",
+     "body": "MPV",
+     "seats": "7/8",
+     "pattern": false,
+     "years": [
+      2025,
+      2024,
+      2023
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "hyundai",
+   "name": "Hyundai",
+   "modelCount": 14,
+   "models": [
+    {
+     "slug": "i20",
+     "name": "i20",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "verna",
+     "name": "Verna",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "venue",
+     "name": "Venue",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "creta",
+     "name": "Creta",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": "Creta 2020–2024 shares one seat pattern. 2025 facelift has its own template."
+    },
+    {
+     "slug": "alcazar",
+     "name": "Alcazar",
+     "body": "SUV",
+     "seats": "6/7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "exter",
+     "name": "Exter",
+     "body": "Micro SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "tata",
+   "name": "Tata",
+   "modelCount": 12,
+   "models": [
+    {
+     "slug": "altroz",
+     "name": "Altroz",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "nexon",
+     "name": "Nexon",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "punch",
+     "name": "Punch",
+     "body": "Micro SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021
+     ],
+     "note": ""
+    },
+    {
+     "slug": "harrier",
+     "name": "Harrier",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "safari",
+     "name": "Safari",
+     "body": "SUV",
+     "seats": "6/7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "tiago",
+     "name": "Tiago",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "curvv",
+     "name": "Curvv",
+     "body": "SUV coupe",
+     "seats": "5",
+     "pattern": false,
+     "years": [
+      2025,
+      2024
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "mahindra",
+   "name": "Mahindra",
+   "modelCount": 11,
+   "models": [
+    {
+     "slug": "thar",
+     "name": "Thar",
+     "body": "SUV",
+     "seats": "4",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "xuv700",
+     "name": "XUV700",
+     "body": "SUV",
+     "seats": "5/7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021
+     ],
+     "note": ""
+    },
+    {
+     "slug": "scorpio-n",
+     "name": "Scorpio-N",
+     "body": "SUV",
+     "seats": "6/7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    },
+    {
+     "slug": "xuv-3xo",
+     "name": "XUV 3XO",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024
+     ],
+     "note": ""
+    },
+    {
+     "slug": "bolero-neo",
+     "name": "Bolero Neo",
+     "body": "SUV",
+     "seats": "7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "thar-roxx",
+     "name": "Thar Roxx",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": false,
+     "years": [
+      2025,
+      2024
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "toyota",
+   "name": "Toyota",
+   "modelCount": 9,
+   "models": [
+    {
+     "slug": "fortuner",
+     "name": "Fortuner",
+     "body": "SUV",
+     "seats": "7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "innova-hycross",
+     "name": "Innova Hycross",
+     "body": "MPV",
+     "seats": "7/8",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    },
+    {
+     "slug": "innova-crysta",
+     "name": "Innova Crysta",
+     "body": "MPV",
+     "seats": "7/8",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "glanza",
+     "name": "Glanza",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "hyryder",
+     "name": "Hyryder",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    },
+    {
+     "slug": "camry",
+     "name": "Camry",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": false,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "kia",
+   "name": "Kia",
+   "modelCount": 6,
+   "models": [
+    {
+     "slug": "seltos",
+     "name": "Seltos",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "sonet",
+     "name": "Sonet",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "carens",
+     "name": "Carens",
+     "body": "MPV",
+     "seats": "6/7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    },
+    {
+     "slug": "syros",
+     "name": "Syros",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": false,
+     "years": [
+      2025
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "honda",
+   "name": "Honda",
+   "modelCount": 6,
+   "models": [
+    {
+     "slug": "city",
+     "name": "City",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "amaze",
+     "name": "Amaze",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "elevate",
+     "name": "Elevate",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023
+     ],
+     "note": ""
+    },
+    {
+     "slug": "wr-v",
+     "name": "WR-V",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "mg",
+   "name": "MG",
+   "modelCount": 5,
+   "models": [
+    {
+     "slug": "hector",
+     "name": "Hector",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "hector-plus",
+     "name": "Hector Plus",
+     "body": "SUV",
+     "seats": "6/7",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "astor",
+     "name": "Astor",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021
+     ],
+     "note": ""
+    },
+    {
+     "slug": "windsor-ev",
+     "name": "Windsor EV",
+     "body": "Crossover",
+     "seats": "5",
+     "pattern": false,
+     "years": [
+      2025,
+      2024
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "skoda",
+   "name": "Skoda",
+   "modelCount": 5,
+   "models": [
+    {
+     "slug": "kushaq",
+     "name": "Kushaq",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021
+     ],
+     "note": ""
+    },
+    {
+     "slug": "slavia",
+     "name": "Slavia",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    },
+    {
+     "slug": "kylaq",
+     "name": "Kylaq",
+     "body": "Compact SUV",
+     "seats": "5",
+     "pattern": false,
+     "years": [
+      2025
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "volkswagen",
+   "name": "Volkswagen",
+   "modelCount": 5,
+   "models": [
+    {
+     "slug": "taigun",
+     "name": "Taigun",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021
+     ],
+     "note": ""
+    },
+    {
+     "slug": "virtus",
+     "name": "Virtus",
+     "body": "Sedan",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    },
+    {
+     "slug": "polo",
+     "name": "Polo",
+     "body": "Hatchback",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    }
+   ]
+  },
+  {
+   "slug": "jeep",
+   "name": "Jeep",
+   "modelCount": 2,
+   "models": [
+    {
+     "slug": "compass",
+     "name": "Compass",
+     "body": "SUV",
+     "seats": "5",
+     "pattern": true,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022,
+      2021,
+      2020,
+      2019
+     ],
+     "note": ""
+    },
+    {
+     "slug": "meridian",
+     "name": "Meridian",
+     "body": "SUV",
+     "seats": "5/7",
+     "pattern": false,
+     "years": [
+      2025,
+      2024,
+      2023,
+      2022
+     ],
+     "note": ""
+    }
+   ]
+  }
+ ]
+}

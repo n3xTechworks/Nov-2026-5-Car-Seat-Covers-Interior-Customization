@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#0B111D">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('hexstitch-theme');
+        var d = localStorage.getItem('hexstitch-dir');
+        if (t !== 'dark' && t !== 'light') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.setAttribute('dir', d === 'rtl' ? 'rtl' : 'ltr');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+{{preload_tag}}  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="css/pages/{{css}}.css">
+  <script defer src="data/site-data.js"></script>
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/site.js"></script>
+  <script defer src="js/pages/{{js}}.js"></script>
+</head>
+<body class="{{body_class}}">
+  <a class="skip-link" href="#main">Skip to main content</a>

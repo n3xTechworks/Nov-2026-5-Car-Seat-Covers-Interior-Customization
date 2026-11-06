@@ -1,0 +1,20 @@
+/* legal pages (privacy + terms, PDF 41-42) */
+.legal-band { text-align: center; padding-bottom: clamp(32px, 4vw, 48px); }
+.legal-band .crumbs { justify-content: center; }
+.legal-band h1 { margin-inline: auto; }
+.legal-lead { margin: 14px auto 0; max-width: 56ch; color: var(--muted); }
+.legal-layout { grid-template-columns: 260px minmax(0, 1fr); gap: 32px; }
+.legal-toc h2 { margin: 0; }
+.legal-toc ol { gap: 4px; }
+.legal-toc a { display: block; padding: 8px 12px; border-radius: var(--r-sm); font-weight: 600; color: var(--text-2); }
+.legal-toc a:hover { background: var(--surface-2); color: var(--text); }
+.legal-toc a[aria-current="true"] { background: var(--ink); color: #fff; }
+[data-theme="dark"] .legal-toc a[aria-current="true"] { background: var(--amber); color: var(--on-amber); }
+.legal-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-xl); padding: clamp(24px, 3.4vw, 40px); min-width: 0; }
+.legal-prose { max-width: none; font-size: 1rem; }
+.legal-sec + .legal-sec { margin-top: 28px; }
+.legal-prose h2 { margin: 0 0 8px; font-size: clamp(1.25rem, 1.1rem + .6vw, 1.6rem); }
+.legal-note { margin-top: 32px; padding: 16px 18px; border-radius: var(--r-md); background: var(--surface-2); color: var(--text-2); font-size: .94rem; }
+@media (max-width: 1023px) {
+  .legal-layout { grid-template-columns: minmax(0, 1fr); }
+}

@@ -1,0 +1,48 @@
+---
+nav: gallery
+css: project
+js: project
+---
+<!-- Gallery project template: generated for every project in data/projects.json (PDF pages 31-33). -->
+<section class="title-band pj-band" aria-labelledby="pj-title">
+  <div class="container">
+    {{crumbs_html}}
+    <div class="pj-titlebar">
+      <h1 id="pj-title">{{x.title}}</h1>
+      {{pj_tags}}
+    </div>
+    {{pj_photos}}
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Project details">
+  <div class="container">
+    <div class="pj-layout">
+      <div class="pj-main">
+        <div class="pj-brief">
+          <div><h2 class="h3">The brief</h2><p>{{x.brief}}</p></div>
+          <div><h2 class="h3">What we did</h2><p>{{x.did}}</p></div>
+        </div>
+        {{pj_specs}}
+        <figure class="owner-quote">
+          <blockquote><p>“{{x.quote}}”</p></blockquote>
+          <figcaption class="person"><span class="avatar" aria-hidden="true">{{x.initials}}</span><span><strong>{{x.owner}}</strong><span>{{x.ownerCar}}</span></span></figcaption>
+        </figure>
+      </div>
+      <aside class="card look-card" aria-labelledby="look-title">
+        <h2 id="look-title" class="h3">Get this look</h2>
+        <p>We'll pre-fill the quote with these materials. Change the car to match yours.</p>
+        <p class="look-row"><span>Similar package</span><strong>{{x.package}} · from {{x.packagePrice}}</strong></p>
+        <a class="btn btn-primary btn-block" href="quote.html?project={{x.slug}}">Get this look</a>
+        <a class="btn btn-secondary btn-block" href="home-2.html#book">Book a design session</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush-top" aria-labelledby="more-title">
+  <div class="container">
+    <div class="section-head"><h2 id="more-title" class="h2-sm">More projects</h2><a class="link" href="gallery.html">All projects {{icon arrow 16}}</a></div>
+    {{pj_more}}
+  </div>
+</section>

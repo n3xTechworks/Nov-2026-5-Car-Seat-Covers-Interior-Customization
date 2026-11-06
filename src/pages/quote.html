@@ -1,0 +1,266 @@
+---
+nav: quote
+title: Get a free quote | Hexstitch
+description: Get a fixed price for made-to-measure seat covers and cabin upgrades in four short steps: your car, your design, a fitting slot and where to send the quote.
+header: quote
+footer: none
+body_class: page-quote
+---
+<section class="title-band quote-band" aria-label="Quote request">
+  <div class="container">
+    <h1 id="q-title" class="q-h1" tabindex="-1">Confirm your car</h1>
+
+    <ol class="q-progress" data-q-progress aria-label="Quote progress">
+      <li data-prog="1"><button type="button" data-goto="1"><span class="q-bar-line" aria-hidden="true"></span><span class="q-bar-label">1 · Car</span></button></li>
+      <li data-prog="2"><button type="button" data-goto="2"><span class="q-bar-line" aria-hidden="true"></span><span class="q-bar-label">2 · Customise</span></button></li>
+      <li data-prog="3"><button type="button" data-goto="3"><span class="q-bar-line" aria-hidden="true"></span><span class="q-bar-label">3 · Fitting slot</span></button></li>
+      <li data-prog="4"><button type="button" data-goto="4"><span class="q-bar-line" aria-hidden="true"></span><span class="q-bar-label">4 · Contact</span></button></li>
+    </ol>
+    <div class="q-step-row"><p class="q-step-m" aria-live="polite" data-step-m>Step 1 of 4 · Car</p><p class="q-help-m">Need help? <button class="linklike" type="button" data-modal-open="callbackModal">Call me back</button></p></div>
+
+    <div class="q-layout" data-q-layout>
+      <div class="q-main">
+
+        <!-- STEP 1: car (PDF 23) -->
+        <form class="q-step card" data-step="1" data-validate data-no-reset novalidate aria-label="Step 1 of 4: your car">
+          <div class="q-head" data-h1-slot></div>
+          <p class="q-sub">We picked this up from your car selection. Change anything that's different.</p>
+          <div class="q-grid3">
+            <div class="field"><label for="q-brand">Brand <span class="req" aria-hidden="true">*</span></label><select id="q-brand" name="brand" required data-q-brand><option value="">Choose brand</option></select></div>
+            <div class="field"><label for="q-model">Model <span class="req" aria-hidden="true">*</span></label><select id="q-model" name="model" required data-q-model><option value="">Choose model</option></select></div>
+            <div class="field"><label for="q-year">Year <span class="req" aria-hidden="true">*</span></label><select id="q-year" name="year" required data-q-year><option value="">Year</option></select></div>
+          </div>
+          <p class="q-note is-warn" data-pattern-note hidden></p>
+          <div class="field q-field"><label for="q-reg">Registration number <span class="q-opt">(optional, helps us match the trim)</span></label><input id="q-reg" name="reg" type="text" autocomplete="off" placeholder="TN 37 AB 1234" maxlength="13" data-q-reg></div>
+          <fieldset class="field q-field"><legend>Do the front seats have side airbags?</legend>
+            <div class="chip-row">
+              <label class="chip chip--radio"><input type="radio" name="airbags" value="Yes" checked><span>Yes</span></label>
+              <label class="chip chip--radio"><input type="radio" name="airbags" value="No"><span>No</span></label>
+              <label class="chip chip--radio"><input type="radio" name="airbags" value="Not sure"><span>Not sure</span></label>
+            </div>
+            <p class="hint">Look for an "AIRBAG" tag on the outer side of the seat. We add tear-away seams either way.</p>
+          </fieldset>
+          <fieldset class="field q-field" data-items-field><legend>What would you like quoted? <span class="q-opt">Choose all that apply</span></legend>
+            <div class="q-checks">
+              <label class="q-check"><input type="checkbox" name="items" value="seat"><span class="q-box" aria-hidden="true"></span><span><strong>Seat covers</strong><small>Front + rear</small></span></label>
+              <label class="q-check"><input type="checkbox" name="items" value="steering"><span class="q-box" aria-hidden="true"></span><span><strong>Steering wrap</strong><small>Stitched in car</small></span></label>
+              <label class="q-check"><input type="checkbox" name="items" value="mats"><span class="q-box" aria-hidden="true"></span><span><strong>Floor mats</strong><small>7D or 3D tray</small></span></label>
+              <label class="q-check"><input type="checkbox" name="items" value="ambient"><span class="q-box" aria-hidden="true"></span><span><strong>Ambient lighting</strong><small>Dash + doors</small></span></label>
+              <label class="q-check"><input type="checkbox" name="items" value="roof"><span class="q-box" aria-hidden="true"></span><span><strong>Roof liner</strong><small>Suede or starlight</small></span></label>
+              <label class="q-check"><input type="checkbox" name="items" value="doors"><span class="q-box" aria-hidden="true"></span><span><strong>Door pad inserts</strong><small>Matched to seats</small></span></label>
+            </div>
+            <p class="q-extra" data-extra hidden></p>
+            <p class="field-error" data-items-error></p>
+          </fieldset>
+          <div class="q-foot">
+            <a class="q-back" href="products.html" data-back-product>{{icon arrow-left 16}} <span>Back to products</span></a>
+            <button class="btn btn-primary btn-lg" type="submit">Continue to customise {{icon arrow 16}}</button>
+          </div>
+        </form>
+
+        <!-- STEP 2: customise (PDF 24) -->
+        <form class="q-step card" data-step="2" data-validate data-no-reset novalidate hidden aria-label="Step 2 of 4: customise">
+          <div class="q-head" data-h1-slot></div>
+          <p class="q-sub">Not sure yet? Pick the closest option. We'll go through samples with you before cutting.</p>
+
+          <fieldset class="field q-field" data-if="seat"><legend>Material</legend>
+            <div class="q-mats">
+              <label class="q-mat"><input type="radio" name="material" value="nappa">{{img product-diamond-quilt-2 | Close-up of quilted Nappa-grade PU | 800 | eager}}<strong>Nappa-grade PU</strong><small data-delta="nappa">Included</small></label>
+              <label class="q-mat"><input type="radio" name="material" value="perforated">{{img product-honeycomb-perforated-2 | Close-up of perforated leatherette | 800 | eager}}<strong>Perforated</strong><small data-delta="perforated">+₹700</small></label>
+              <label class="q-mat"><input type="radio" name="material" value="microsuede">{{img product-channel-pleat-suede-2 | Close-up of channel-pleated microsuede | 800 | eager}}<strong>Microsuede</strong><small data-delta="microsuede">+₹3,900</small></label>
+              <label class="q-mat"><input type="radio" name="material" value="fabric">{{img product-jacquard-fabric-2 | Close-up of jacquard fabric seat panel | 800 | eager}}<strong>Jacquard fabric</strong><small data-delta="fabric">−₹2,000</small></label>
+            </div>
+          </fieldset>
+          <div class="q-two" data-if="seat">
+            <fieldset class="field q-field"><legend>Quilt pattern</legend>
+              <div class="chip-row">
+                <label class="chip chip--radio"><input type="radio" name="pattern" value="Diamond"><span>Diamond</span></label>
+                <label class="chip chip--radio"><input type="radio" name="pattern" value="Honeycomb"><span>Honeycomb</span></label>
+                <label class="chip chip--radio"><input type="radio" name="pattern" value="Channel"><span>Channel</span></label>
+                <label class="chip chip--radio"><input type="radio" name="pattern" value="Plain"><span>Plain</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field q-field"><legend>Colour · <span data-lbl="colour">Jet black</span></legend>
+              <div class="swatch-row">
+                <label class="swatch" style="--c:#14161B" title="Jet black"><input type="radio" name="colour" value="Jet black"><span class="sr-only">Jet black</span></label>
+                <label class="swatch" style="--c:#5B3A29" title="Mocha"><input type="radio" name="colour" value="Mocha"><span class="sr-only">Mocha</span></label>
+                <label class="swatch" style="--c:#D8C7A6" title="Ivory"><input type="radio" name="colour" value="Ivory"><span class="sr-only">Ivory</span></label>
+                <label class="swatch" style="--c:#4A505A" title="Graphite"><input type="radio" name="colour" value="Graphite"><span class="sr-only">Graphite</span></label>
+                <label class="swatch" style="--c:#6E1E24" title="Oxblood"><input type="radio" name="colour" value="Oxblood"><span class="sr-only">Oxblood</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="q-two">
+            <fieldset class="field q-field" data-if="seat steering"><legend>Thread · <span data-lbl="thread">Amber</span></legend>
+              <div class="swatch-row">
+                <label class="swatch" style="--c:#E7A23B" title="Amber"><input type="radio" name="thread" value="Amber"><span class="sr-only">Amber</span></label>
+                <label class="swatch" style="--c:#D7262B" title="Racing red"><input type="radio" name="thread" value="Racing red"><span class="sr-only">Racing red</span></label>
+                <label class="swatch" style="--c:#F1F1F1" title="White"><input type="radio" name="thread" value="White"><span class="sr-only">White</span></label>
+                <label class="swatch" style="--c:#3B82F6" title="Electric blue"><input type="radio" name="thread" value="Electric blue"><span class="sr-only">Electric blue</span></label>
+                <label class="swatch" style="--c:#2A2A2A" title="Tonal black"><input type="radio" name="thread" value="Tonal black"><span class="sr-only">Tonal black</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field q-field" data-if="steering"><legend>Steering wrap</legend>
+              <div class="chip-row">
+                <label class="chip chip--radio"><input type="radio" name="wrap" value="Perforated"><span>Perforated</span></label>
+                <label class="chip chip--radio"><input type="radio" name="wrap" value="Smooth nappa"><span>Smooth nappa</span></label>
+                <label class="chip chip--radio"><input type="radio" name="wrap" value="Suede + marker"><span>Suede + marker</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="q-two">
+            <fieldset class="field q-field" data-if="mats"><legend>Floor mats</legend>
+              <div class="chip-row">
+                <label class="chip chip--radio"><input type="radio" name="mats" value="7D diamond"><span>7D diamond · ₹5,800</span></label>
+                <label class="chip chip--radio"><input type="radio" name="mats" value="3D tray"><span>3D tray · ₹3,900</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="field q-field" data-if="roof"><legend>Roof liner</legend>
+              <div class="chip-row">
+                <label class="chip chip--radio"><input type="radio" name="roof" value="Suede liner"><span>Suede · ₹14,500</span></label>
+                <label class="chip chip--radio"><input type="radio" name="roof" value="Starlight"><span>Starlight · ₹22,000</span></label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="q-toggle" data-if="seat">
+            <label class="q-toggle-row" for="q-emb"><span><strong>Embroider initials on the headrests</strong><small>Up to 3 letters, front headrests · +₹600</small></span><input class="switch" id="q-emb" name="embroidery" type="checkbox" role="switch"></label>
+            <div class="field q-initials" data-initials hidden><label for="q-ini">Initials</label><input id="q-ini" name="initials" type="text" maxlength="3" placeholder="e.g. PR" autocomplete="off" data-rule="initials"></div>
+          </div>
+          <div class="field q-field"><label for="q-notes">Anything else? <span class="q-opt">(optional)</span></label><textarea id="q-notes" name="notes" rows="4" maxlength="600" placeholder="Two-tone, pet-friendly, child seat anchors…"></textarea></div>
+          <div class="q-foot">
+            <button class="q-back" type="button" data-goto="1">{{icon arrow-left 16}} <span>Car</span></button>
+            <button class="btn btn-primary btn-lg" type="submit">Continue to fitting slot {{icon arrow 16}}</button>
+          </div>
+        </form>
+
+        <!-- STEP 3: fitting slot (PDF 25) -->
+        <form class="q-step card" data-step="3" data-validate data-no-reset novalidate hidden aria-label="Step 3 of 4: fitting slot">
+          <div class="q-head" data-h1-slot></div>
+          <p class="q-sub" data-slot-sub>Your set needs 3 working days to cut and stitch.</p>
+          <fieldset class="field q-field"><legend>How do you want to come in?</legend>
+            <div class="q-methods">
+              <label class="q-method"><input type="radio" name="method" value="studio"><span class="opt-dot" aria-hidden="true"></span><strong>Drive to the studio</strong><small>Wait in our lounge</small><b>Free</b></label>
+              <label class="q-method"><input type="radio" name="method" value="pickup"><span class="opt-dot" aria-hidden="true"></span><strong>Pick-up &amp; drop</strong><small>Within city limits</small><b>Free</b></label>
+              <label class="q-method"><input type="radio" name="method" value="template"><span class="opt-dot" aria-hidden="true"></span><strong>Template visit</strong><small>For models not on file</small><b>+1 day</b></label>
+            </div>
+          </fieldset>
+          <fieldset class="field q-field"><legend>Day</legend>
+            <div class="q-days" data-days></div>
+            <p class="field-error" data-day-error></p>
+          </fieldset>
+          <fieldset class="field q-field"><legend>Drop-off time</legend>
+            <div class="chip-row q-times" data-times></div>
+            <p class="hint" data-ready-hint></p>
+            <p class="field-error" data-time-error></p>
+          </fieldset>
+          <fieldset class="q-pickup" data-pickup>
+            <legend class="sr-only">Pick-up address</legend>
+            <div class="field"><label for="q-address">Pick-up address</label><input id="q-address" name="address" type="text" autocomplete="street-address" placeholder="House no., street, area" required minlength="6"></div>
+            <div class="field"><label for="q-pin">PIN code</label><input id="q-pin" name="pin" type="text" inputmode="numeric" maxlength="6" autocomplete="postal-code" placeholder="6-digit PIN" required><p class="hint q-pin-hint" data-pin-hint>Free pick-up and drop within city limits</p></div>
+          </fieldset>
+          <div class="q-foot">
+            <button class="q-back" type="button" data-goto="2">{{icon arrow-left 16}} <span>Customise</span></button>
+            <button class="btn btn-primary btn-lg" type="submit">Continue to contact {{icon arrow 16}}</button>
+          </div>
+        </form>
+
+        <!-- STEP 4: contact (PDF 26) -->
+        <form class="q-step card" data-step="4" data-validate data-no-reset novalidate hidden aria-label="Step 4 of 4: contact details">
+          <div class="q-head" data-h1-slot></div>
+          <p class="q-sub">We reply within one working day by WhatsApp and email.</p>
+          <div class="error-summary q-errors" data-errors role="alert" tabindex="-1" hidden></div>
+          <div class="form-grid q-contact">
+            <div class="field"><label for="q-name">Full name <span class="req" aria-hidden="true">*</span></label><input id="q-name" name="name" type="text" autocomplete="name" placeholder="e.g. Priya Raman" required></div>
+            <div class="field"><label for="q-phone">Mobile number <span class="req" aria-hidden="true">*</span></label><input id="q-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" maxlength="10" required></div>
+            <div class="field span-2"><label for="q-email">Email <span class="req" aria-hidden="true">*</span></label><input id="q-email" name="email" type="email" autocomplete="email" placeholder="name@gmail.com" required></div>
+            <div class="field"><label for="q-alt">Alternate number</label><input id="q-alt" name="alt" type="tel" inputmode="numeric" placeholder="Optional" maxlength="10" data-rule="phone"><p class="hint">Optional · digits only</p></div>
+          </div>
+          <label class="q-toggle-row q-wa" for="q-wa"><span><strong>Send updates on WhatsApp</strong><small>Quote, fitting reminders and ready-for-pickup alerts</small></span><input class="switch" id="q-wa" name="whatsapp" type="checkbox" role="switch" checked></label>
+          <div class="check-field"><input id="q-consent" name="consent" type="checkbox" required><label for="q-consent">I agree to be contacted about this quote. See the <a class="link-amber" href="privacy.html">privacy policy</a>.</label></div>
+          <div class="q-foot">
+            <button class="q-back" type="button" data-goto="3">{{icon arrow-left 16}} <span>Fitting slot</span></button>
+            <button class="btn btn-primary btn-lg" type="submit">Review my quote {{icon arrow 16}}</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="q-side" aria-label="Your quote so far">
+        <div class="q-sum" data-sum>
+          <h2 class="q-sum-title">Your quote so far</h2>
+          <div class="q-sum-head" data-sum-head></div>
+          <dl class="q-lines" data-sum-lines></dl>
+          <p class="q-total"><span>Estimate</span><strong data-sum-total>₹0</strong></p>
+          <p class="q-sum-note" data-sum-note>Final price confirmed by the studio within one working day. No payment now.</p>
+          <button class="linklike q-sw-link" type="button" data-modal-open="swatchModal" data-sum-swatch hidden>Want swatches first? Get them free {{icon arrow 16}}</button>
+        </div>
+        <div class="q-rules card" data-rules hidden>
+          <h2 class="q-rules-title">Validation rules</h2>
+          <ul>
+            <li>Name: 2+ letters, no numbers or symbols except . ' -</li>
+            <li>Mobile: 10 digits starting 6–9; digits only</li>
+            <li>Email: needs "@" and a domain, e.g. name@gmail.com</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <!-- REVIEW (PDF 27) -->
+    <div class="q-review" data-panel="5" hidden>
+      <div class="q-review-top"><div data-h1-slot></div><p class="q-charged">Nothing is charged now</p></div>
+      <div class="q-review-cards" data-review-cards></div>
+      <form class="q-send" data-send data-validate data-no-reset novalidate>
+        <dl class="q-send-lines" data-send-lines></dl>
+        <div class="q-send-right">
+          <p class="q-send-total"><span>Estimated total</span><strong data-send-total>₹0</strong></p>
+          <div class="check-field q-terms"><input id="q-terms" name="terms" type="checkbox" required><label for="q-terms">I accept the <a href="terms.html">terms</a> and the studio will confirm the final price.</label></div>
+          <button class="btn btn-primary btn-lg btn-block" type="submit" data-send-btn><span class="q-spin" aria-hidden="true"></span><span data-send-label>Send quote request</span></button>
+          <p class="q-send-note">No advance. You pay after the fitting, by UPI, card or cash.</p>
+        </div>
+      </form>
+    </div>
+
+    <!-- CONFIRMATION (PDF 28) -->
+    <div class="q-done" data-panel="6" hidden>
+      <div class="q-done-hero">
+        <div class="q-done-text">
+          <p class="badge badge--green q-ref" data-ref>✓ Request received</p>
+          <div data-h1-slot></div>
+          <p class="lead q-done-lead">We'll confirm the final price on WhatsApp within one working day. Your fitting slot is held for 48 hours until you confirm.</p>
+          <div class="q-done-ctas">
+            <button class="btn btn-primary btn-lg" type="button" data-ics>{{icon calendar 18}} Add fitting to calendar</button>
+            <a class="btn btn-secondary btn-lg" href="https://wa.me/919876543210" target="_blank" rel="noopener" data-wa-link>{{icon whatsapp 18}} Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="q-done-media" data-done-media></div>
+      </div>
+      <div class="q-done-grid">
+        <div class="card q-next">
+          <h2 class="q-next-title">What happens next</h2>
+          <ol class="q-next-list" data-next></ol>
+        </div>
+        <div class="q-done-side">
+          <div class="q-sum q-sum--done">
+            <h2 class="q-sum-title">Summary</h2>
+            <div class="q-sum-head" data-done-summary></div>
+            <p class="q-total"><span>Estimate</span><strong data-done-total>₹0</strong></p>
+          </div>
+          <div class="card q-wait">
+            <h2 class="q-next-title">While you wait</h2>
+            <ul>
+              <li><a class="link link-amber" href="gallery.html" data-wait-gallery>See finished cabins in the gallery {{icon arrow 16}}</a></li>
+              <li><a class="link link-amber" href="warranty.html">Read warranty &amp; care {{icon arrow 16}}</a></li>
+              <li><button class="link link-amber linklike" type="button" data-modal-open="swatchModal">Get free swatches at home {{icon arrow 16}}</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="q-home"><a class="link link-amber" href="index.html" data-new-quote>{{icon arrow-left 16}} Back to home</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="estimate-bar q-mbar" data-mbar>
+  <p class="q-mbar-total"><small>Estimate</small><strong data-mbar-total>₹0</strong></p>
+  <button class="btn btn-primary btn-lg" type="button" data-mbar-next>Next: customise</button>
+</div>
+{{> swatch-modal}}

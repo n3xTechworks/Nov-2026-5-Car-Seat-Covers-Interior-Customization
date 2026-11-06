@@ -1,0 +1,8 @@
+/* project detail page styles live in css/site.css section 18 */
+
+/* owner quote: initials avatar must keep dark-on-amber (the generic .person span colour would grey it out) */
+.owner-quote .person .avatar { color: var(--on-amber); }
+.more-card .more-media img { transition: transform .6s var(--ease); }
+.more-card:hover .more-media img { transform: scale(1.04); }
+.pj-ph--more .pj-more { transition: background-color .3s; }
+.pj-ph--more:hover .pj-more { background: rgba(11, 17, 29, .4); }

@@ -1,0 +1,507 @@
+{
+ "_note": "8 gallery projects (PDF 29-33). page = gallery-<slug>.html generated from src/templates/project.html. images project-N-a/b/c. body: hatchback|sedan|suv|mpv. material: nappa|perforated|microsuede|fabric. Project 1 = featured 'Project of the month'.",
+ "bodies": {
+  "hatchback": "Hatchback",
+  "sedan": "Sedan",
+  "suv": "SUV",
+  "mpv": "MPV / 7-seater"
+ },
+ "projects": [
+  {
+   "n": 1,
+   "slug": "toyota-fortuner-ivory",
+   "page": "gallery-toyota-fortuner-ivory.html",
+   "title": "Toyota Fortuner, ivory diamond",
+   "car": "Toyota Fortuner 2022, 7 seats",
+   "carShort": "Fortuner",
+   "body": "mpv",
+   "bodyLabel": "MPV / 7-seater",
+   "material": "nappa",
+   "materialLabel": "Nappa-grade PU",
+   "package": "Bespoke",
+   "packagePrice": 58000,
+   "time": "2 days at the studio",
+   "timeShort": "2 days",
+   "location": "Race Course",
+   "scope": "Three rows, roof liner, mats",
+   "summary": "Three rows of ivory Nappa-grade PU with a matching suede roof liner and cream mats.",
+   "brief": "A family of six wanted the dark factory interior to feel lighter for long drives to Ooty, and easy to wipe after the kids.",
+   "did": "Ivory diamond PU on all three rows, a cream suede roof liner and matching 7D mats, with brown thread to hide wear.",
+   "specs": [
+    [
+     "Car",
+     "Toyota Fortuner 2022, 7 seats"
+    ],
+    [
+     "Seats",
+     "Nappa-grade PU, ivory, 40 mm diamond"
+    ],
+    [
+     "Thread",
+     "Brown bonded nylon"
+    ],
+    [
+     "Roof liner",
+     "Cream microsuede"
+    ],
+    [
+     "Floor",
+     "7D mats, cream with brown edging"
+    ],
+    [
+     "Time",
+     "2 days at the studio"
+    ]
+   ],
+   "quote": "Six months and two road trips later, the ivory still looks new. Juice spills wipe straight off.",
+   "owner": "Rajesh M.",
+   "ownerCar": "Toyota Fortuner owner",
+   "product": "diamond-quilt",
+   "images": [
+    "project-1-a",
+    "project-1-b",
+    "project-1-c"
+   ],
+   "alts": [
+    "Ivory diamond-quilted seats in a Toyota Fortuner",
+    "Second-row ivory captain view of the Fortuner cabin",
+    "Ivory seats and cream mats seen from the rear row"
+   ],
+   "initials": "RM"
+  },
+  {
+   "n": 2,
+   "slug": "kia-seltos-graphite",
+   "page": "gallery-kia-seltos-graphite.html",
+   "title": "Kia Seltos, graphite honeycomb",
+   "car": "Kia Seltos 2023, 5 seats",
+   "carShort": "Seltos",
+   "body": "suv",
+   "bodyLabel": "SUV",
+   "material": "perforated",
+   "materialLabel": "Perforated leatherette",
+   "package": "Signature",
+   "packagePrice": 32500,
+   "time": "4 hours",
+   "timeShort": "4 hrs",
+   "location": "Saravanampatti",
+   "scope": "Seat covers, steering wrap",
+   "summary": "Graphite perforated honeycomb covers with a matching hand-stitched steering wrap.",
+   "brief": "Arjun drives two hours a day and wanted seats that stay cool and look factory-fitted, not like add-on covers.",
+   "did": "Graphite honeycomb perforated covers on all five seats with tonal black thread, plus a graphite steering wrap stitched in the car.",
+   "specs": [
+    [
+     "Car",
+     "Kia Seltos 2023, 5 seats"
+    ],
+    [
+     "Seats",
+     "Perforated leatherette, graphite, honeycomb"
+    ],
+    [
+     "Thread",
+     "Tonal black"
+    ],
+    [
+     "Steering",
+     "Hand-stitched wrap, graphite"
+    ],
+    [
+     "Floor",
+     "Factory mats kept"
+    ],
+    [
+     "Time",
+     "4 hours at the studio"
+    ]
+   ],
+   "quote": "They had a pattern for my 2023 Seltos already. The covers look factory-fitted and nothing shifts.",
+   "owner": "Arjun R.",
+   "ownerCar": "Kia Seltos owner",
+   "product": "honeycomb-perforated",
+   "images": [
+    "project-2-a",
+    "project-2-b",
+    "project-2-c"
+   ],
+   "alts": [
+    "Graphite honeycomb seats in a Kia Seltos",
+    "Front seats and steering wrap in the Seltos",
+    "Rear bench in graphite honeycomb"
+   ],
+   "initials": "AR"
+  },
+  {
+   "n": 3,
+   "slug": "innova-hycross-mocha",
+   "page": "gallery-innova-hycross-mocha.html",
+   "title": "Innova Hycross, mocha captain",
+   "car": "Toyota Innova Hycross 2024, 7 seats",
+   "carShort": "Hycross",
+   "body": "mpv",
+   "bodyLabel": "MPV / 7-seater",
+   "material": "nappa",
+   "materialLabel": "Nappa-grade PU",
+   "package": "Signature",
+   "packagePrice": 32500,
+   "time": "6 hours",
+   "timeShort": "6 hrs",
+   "location": "Saibaba Colony",
+   "scope": "Three rows, steering wrap",
+   "summary": "Mocha Nappa-grade PU on captain seats and the third row, with a mocha steering wrap.",
+   "brief": "A taxi-turned-family car that needed to look premium for weekend trips while surviving daily school runs.",
+   "did": "Mocha diamond-quilt covers on captain seats and third row, armrests wrapped to match, and a mocha steering wrap with amber thread.",
+   "specs": [
+    [
+     "Car",
+     "Toyota Innova Hycross 2024, 7 seats"
+    ],
+    [
+     "Seats",
+     "Nappa-grade PU, mocha, diamond"
+    ],
+    [
+     "Thread",
+     "Amber"
+    ],
+    [
+     "Steering",
+     "Hand-stitched wrap, mocha"
+    ],
+    [
+     "Floor",
+     "3D tray mats, three rows"
+    ],
+    [
+     "Time",
+     "6 hours at the studio"
+    ]
+   ],
+   "quote": "The captain seats feel like business class now. Our drivers keep complimenting the stitching.",
+   "owner": "Sundar V.",
+   "ownerCar": "Innova Hycross owner",
+   "product": "diamond-quilt",
+   "images": [
+    "project-3-a",
+    "project-3-b",
+    "project-3-c"
+   ],
+   "alts": [
+    "Mocha leather captain seats in an MPV",
+    "Mocha second-row captain seats",
+    "Third row in mocha leather"
+   ],
+   "initials": "SV"
+  },
+  {
+   "n": 4,
+   "slug": "mahindra-thar-tan",
+   "page": "gallery-mahindra-thar-tan.html",
+   "title": "Mahindra Thar, tan channel",
+   "car": "Mahindra Thar 2023, 4 seats",
+   "carShort": "Thar",
+   "body": "suv",
+   "bodyLabel": "SUV",
+   "material": "nappa",
+   "materialLabel": "Nappa-grade PU",
+   "package": "Signature",
+   "packagePrice": 32500,
+   "time": "5 hours",
+   "timeShort": "5 hrs",
+   "location": "Thudiyalur",
+   "scope": "Covers, wrap, 7D mats",
+   "summary": "Tan channel-pleated covers, a tan steering wrap and 7D mats for an open-top Thar.",
+   "brief": "An open-roof weekend car that sees sun, dust and the odd rain shower. The owner wanted warm tan without babying it.",
+   "did": "Tan channel-pleat PU with UV-stable finish, a tan wrap with black thread and 7D mats with raised edges for dust.",
+   "specs": [
+    [
+     "Car",
+     "Mahindra Thar 2023, 4 seats"
+    ],
+    [
+     "Seats",
+     "Nappa-grade PU, tan, channel"
+    ],
+    [
+     "Thread",
+     "Tonal black"
+    ],
+    [
+     "Steering",
+     "Hand-stitched wrap, tan"
+    ],
+    [
+     "Floor",
+     "7D mats, black"
+    ],
+    [
+     "Time",
+     "5 hours at the studio"
+    ]
+   ],
+   "quote": "Roof off half the year and the tan still looks rich. Dust just wipes away.",
+   "owner": "Senthil K.",
+   "ownerCar": "Mahindra Thar owner",
+   "product": "mats-7d",
+   "images": [
+    "project-4-a",
+    "project-4-b",
+    "project-4-c"
+   ],
+   "alts": [
+    "Tan leather seats in an off-roader",
+    "Tan front seats and dashboard",
+    "Tan rear seats"
+   ],
+   "initials": "SK"
+  },
+  {
+   "n": 5,
+   "slug": "honda-amaze-navy",
+   "page": "gallery-honda-amaze-navy.html",
+   "title": "Honda Amaze, navy fabric",
+   "car": "Honda Amaze 2021, 5 seats",
+   "carShort": "Amaze",
+   "body": "sedan",
+   "bodyLabel": "Sedan",
+   "material": "fabric",
+   "materialLabel": "Jacquard fabric",
+   "package": "Essential",
+   "packagePrice": 18900,
+   "time": "3 hours",
+   "timeShort": "3 hrs",
+   "location": "Singanallur",
+   "scope": "Seat covers, 3D mats",
+   "summary": "Navy jacquard fabric covers with 3D tray mats for a cool, practical daily sedan.",
+   "brief": "A teacher's daily car with no shade at work. She wanted something cool, smart and easy to keep clean.",
+   "did": "Navy jacquard covers with tonal stitching and waterproof 3D tray mats for the monsoon.",
+   "specs": [
+    [
+     "Car",
+     "Honda Amaze 2021, 5 seats"
+    ],
+    [
+     "Seats",
+     "Jacquard fabric, navy"
+    ],
+    [
+     "Thread",
+     "Tonal navy"
+    ],
+    [
+     "Steering",
+     "Factory"
+    ],
+    [
+     "Floor",
+     "3D tray mats"
+    ],
+    [
+     "Time",
+     "3 hours at the studio"
+    ]
+   ],
+   "quote": "No more burning seats at 3 pm. It looks so much smarter than the beige it came with.",
+   "owner": "Lakshmi N.",
+   "ownerCar": "Honda Amaze owner",
+   "product": "jacquard-fabric",
+   "images": [
+    "project-5-a",
+    "project-5-b",
+    "project-5-c"
+   ],
+   "alts": [
+    "Navy fabric seats in a sedan",
+    "Navy front seats",
+    "Navy rear bench"
+   ],
+   "initials": "LN"
+  },
+  {
+   "n": 6,
+   "slug": "mg-hector-oxblood",
+   "page": "gallery-mg-hector-oxblood.html",
+   "title": "MG Hector, oxblood leather",
+   "car": "MG Hector 2024, 5 seats",
+   "carShort": "Hector",
+   "body": "suv",
+   "bodyLabel": "SUV",
+   "material": "nappa",
+   "materialLabel": "Nappa-grade PU",
+   "package": "Signature",
+   "packagePrice": 32500,
+   "time": "5 hours",
+   "timeShort": "5 hrs",
+   "location": "Vadavalli",
+   "scope": "Seat covers, steering wrap, lighting",
+   "summary": "Oxblood Nappa-grade PU with a matching wrap and amber ambient lighting.",
+   "brief": "The owner wanted a bold, warm cabin that felt like a European grand tourer at night.",
+   "did": "Oxblood diamond covers with black piping, a matching steering wrap and 64-colour ambient lighting set to amber.",
+   "specs": [
+    [
+     "Car",
+     "MG Hector 2024, 5 seats"
+    ],
+    [
+     "Seats",
+     "Nappa-grade PU, oxblood, diamond"
+    ],
+    [
+     "Thread",
+     "Black"
+    ],
+    [
+     "Steering",
+     "Hand-stitched wrap, oxblood"
+    ],
+    [
+     "Lighting",
+     "Ambient, dash + 4 doors"
+    ],
+    [
+     "Time",
+     "5 hours at the studio"
+    ]
+   ],
+   "quote": "Friends ask which variant came with red leather. None did. That is the best compliment.",
+   "owner": "Kavin R.",
+   "ownerCar": "MG Hector owner",
+   "product": "ambient",
+   "images": [
+    "project-6-a",
+    "project-6-b",
+    "project-6-c"
+   ],
+   "alts": [
+    "Oxblood red leather seats in an SUV",
+    "Red leather front seats",
+    "Red leather rear seats"
+   ],
+   "initials": "KR"
+  },
+  {
+   "n": 7,
+   "slug": "maruti-swift-red",
+   "page": "gallery-maruti-swift-red.html",
+   "title": "Maruti Swift, red sport",
+   "car": "Maruti Swift 2022, 5 seats",
+   "carShort": "Swift",
+   "body": "hatchback",
+   "bodyLabel": "Hatchback",
+   "material": "perforated",
+   "materialLabel": "Perforated leatherette",
+   "package": "Essential",
+   "packagePrice": 18900,
+   "time": "3 hours",
+   "timeShort": "3 hrs",
+   "location": "Gandhipuram",
+   "scope": "Seat covers",
+   "summary": "Black perforated sport covers with a red insert and red contrast stitching.",
+   "brief": "A first car, bought second-hand, that needed to feel sporty and new without spending on new seats.",
+   "did": "Sport perforated covers with a racing-red centre insert, red stitching and a matching gear boot.",
+   "specs": [
+    [
+     "Car",
+     "Maruti Swift 2022, 5 seats"
+    ],
+    [
+     "Seats",
+     "Perforated leatherette, black + red insert"
+    ],
+    [
+     "Thread",
+     "Racing red"
+    ],
+    [
+     "Steering",
+     "Factory"
+    ],
+    [
+     "Floor",
+     "Factory"
+    ],
+    [
+     "Time",
+     "3 hours at the studio"
+    ]
+   ],
+   "quote": "The red stripe looks like it came from a GT variant. Best money I spent on the car.",
+   "owner": "Suresh B.",
+   "ownerCar": "Maruti Swift owner",
+   "product": "sport-perforated",
+   "images": [
+    "project-7-a",
+    "project-7-b",
+    "project-7-c"
+   ],
+   "alts": [
+    "Red sport seats in a hatchback",
+    "Red and black front sport seats",
+    "Red sport seat detail"
+   ],
+   "initials": "SB"
+  },
+  {
+   "n": 8,
+   "slug": "tata-altroz-grey",
+   "page": "gallery-tata-altroz-grey.html",
+   "title": "Tata Altroz, grey perforated",
+   "car": "Tata Altroz 2022, 5 seats",
+   "carShort": "Altroz",
+   "body": "hatchback",
+   "bodyLabel": "Hatchback",
+   "material": "perforated",
+   "materialLabel": "Perforated leatherette",
+   "package": "Essential",
+   "packagePrice": 18900,
+   "time": "3 hours",
+   "timeShort": "3 hrs",
+   "location": "Kuniyamuthur",
+   "scope": "Seat covers, steering wrap",
+   "summary": "Ash grey perforated covers with a grey steering wrap, light and airy for a hatchback.",
+   "brief": "A young couple wanted a lighter, more open feel than the factory black, without it getting dirty fast.",
+   "did": "Ash grey perforated covers with white thread and a grey steering wrap.",
+   "specs": [
+    [
+     "Car",
+     "Tata Altroz 2022, 5 seats"
+    ],
+    [
+     "Seats",
+     "Perforated leatherette, ash grey"
+    ],
+    [
+     "Thread",
+     "White"
+    ],
+    [
+     "Steering",
+     "Hand-stitched wrap, grey"
+    ],
+    [
+     "Floor",
+     "Factory"
+    ],
+    [
+     "Time",
+     "3 hours at the studio"
+    ]
+   ],
+   "quote": "Grey with white thread makes the small cabin feel bigger. Fitting was done before lunch.",
+   "owner": "Keerthana S.",
+   "ownerCar": "Tata Altroz owner",
+   "product": "honeycomb-perforated",
+   "images": [
+    "project-8-a",
+    "project-8-b",
+    "project-8-c"
+   ],
+   "alts": [
+    "Grey perforated seats in a hatchback",
+    "Grey front seats and steering",
+    "Grey rear seats"
+   ],
+   "initials": "KS"
+  }
+ ]
+}

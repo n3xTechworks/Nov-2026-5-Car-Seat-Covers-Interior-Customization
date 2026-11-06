@@ -1,0 +1,60 @@
+---
+nav: products
+css: product
+js: product
+---
+<!-- Product detail template: generated for every product in data/products.json (PDF pages 20-22). -->
+<section class="title-band pd-band" aria-label="{{p.name}}">
+  <div class="container">
+    {{crumbs_html}}
+    <div class="pd-layout" data-pd="{{p.slug}}" data-price="{{p.price}}">
+      {{pd_gallery}}
+      {{pd_buy}}
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight" aria-label="Product details">
+  <div class="container">
+    <div data-tabs>
+      <div class="tablist" role="tablist" aria-label="Product information">
+        <button class="tab" role="tab" id="t-details" aria-controls="p-details" aria-selected="true" type="button">Details</button>
+        <button class="tab" role="tab" id="t-get" aria-controls="p-get" aria-selected="false" type="button">What you get</button>
+        <button class="tab" role="tab" id="t-care" aria-controls="p-care" aria-selected="false" type="button">Care</button>
+        <button class="tab" role="tab" id="t-reviews" aria-controls="p-reviews" aria-selected="false" type="button">Reviews</button>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="p-details" aria-labelledby="t-details" tabindex="0">
+        <div class="pd-details">
+          <div>
+            <h2 class="h2-sm">{{p.detailsTitle}}</h2>
+            <p class="pd-text">{{p.details}}</p>
+            {{pd_features}}
+          </div>
+          {{pd_specs}}
+        </div>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="p-get" aria-labelledby="t-get" tabindex="0" hidden>
+        <div class="pd-details"><div><h2 class="h2-sm">What you get</h2><p class="pd-text">{{p.summary}}</p></div>{{pd_list includes}}</div>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="p-care" aria-labelledby="t-care" tabindex="0" hidden>
+        <div class="pd-details"><div><h2 class="h2-sm">Caring for it</h2><p class="pd-text">A few minutes a month keeps it looking new for years. The warranty covers stitching and fitting; see <a class="link-amber" href="warranty.html">Warranty &amp; care</a>.</p></div>{{pd_list care}}</div>
+      </div>
+      <div class="tab-panel" role="tabpanel" id="p-reviews" aria-labelledby="t-reviews" tabindex="0" hidden>
+        <div id="reviews">{{pd_reviews}}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--flush-top" aria-labelledby="cross-title">
+  <div class="container">
+    <div class="section-head"><h2 id="cross-title" class="h2-sm">Finish the cabin</h2><a class="link" href="products.html">All products {{icon arrow 16}}</a></div>
+    {{pd_cross}}
+  </div>
+</section>
+<div class="estimate-bar pd-bar" data-pd-bar>
+  <p class="pd-bar-price"><small data-pd-bar-label>Full set</small><strong data-pd-bar-price>{{p.price}}</strong></p>
+  <a class="btn btn-primary btn-lg" href="quote.html?product={{p.slug}}" data-pd-bar-quote>Get a quote</a>
+</div>
+<div hidden data-wa-context="{{p.name}}"></div>
+{{> swatch-modal}}

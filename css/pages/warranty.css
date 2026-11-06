@@ -1,0 +1,63 @@
+/* Warranty & care (PDF 37-38) */
+.wr-cover { gap: 14px; }
+.wr-list-card { padding: clamp(22px, 2.6vw, 30px); }
+.wr-list-card h3 { font-size: 1.45rem; margin-bottom: 12px; }
+.wr-list { list-style: none; margin: 0; padding: 0; }
+.wr-list li { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: .93rem; color: var(--text-2); }
+.wr-list li:last-child { border-bottom: 0; }
+.wr-list svg { flex-shrink: 0; margin-top: 2px; stroke-width: 2.4; }
+.wr-list--yes svg { color: var(--green); }
+.wr-list--no svg { color: var(--red); }
+
+.wr-care { gap: 14px; }
+.wr-care-card { padding: 14px 14px 22px; row-gap: 8px; align-content: start; }
+.wr-care-card h3 { font-size: 1.08rem; padding-inline: 4px; margin-top: 4px; }
+.wr-care-card p { font-size: .88rem; color: var(--text-2); padding-inline: 4px; margin: 0; }
+.wr-care-card p strong { color: var(--text); }
+.wr-care-card .wr-avoid, .wr-care-card .wr-avoid strong { color: var(--red); }
+.wr-chip { display: block; height: 48px; border-radius: 10px; background: linear-gradient(135deg, var(--a), var(--b)); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06); }
+.wr-chip--perf { background-image: radial-gradient(circle, rgba(0, 0, 0, .55) 1.3px, transparent 1.7px), linear-gradient(135deg, var(--a), var(--b)); background-size: 8px 8px, 100% 100%; }
+.wr-chip--weave { background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, .07) 0 2px, transparent 2px 6px), repeating-linear-gradient(-45deg, rgba(255, 255, 255, .07) 0 2px, transparent 2px 6px), linear-gradient(135deg, var(--a), var(--b)); }
+
+.wr-claim { display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+.wr-steps { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.wr-steps li { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; padding: 18px 0; border-bottom: 1px dashed var(--line-2); }
+.wr-num { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--amber); font-weight: 800; font-size: .9rem; }
+[data-theme="dark"] .wr-num { background: var(--surface-3); }
+.wr-steps h3 { font-size: 1.02rem; font-family: var(--font-body); letter-spacing: 0; font-weight: 700; }
+.wr-steps p { margin-top: 3px; color: var(--muted); font-size: .93rem; }
+.wr-steps a { color: var(--text); font-weight: 700; }
+
+.wr-check { border-radius: var(--r-xl); background-color: var(--ink); background-image: var(--quilt); color: #fff; padding: clamp(22px, 2.6vw, 30px); }
+[data-theme="dark"] .wr-check { background-color: var(--navy-2); border: 1px solid var(--line); }
+.wr-form { display: grid; gap: 14px; }
+.wr-form h2 { color: #fff; }
+.wr-check .field > label { color: #fff; }
+.wr-check input { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .16); color: #fff; }
+.wr-check input::placeholder { color: var(--on-dark-3); }
+.wr-check input:focus { border-color: var(--amber); }
+.wr-check .field-error { color: #FFB4AB; }
+.wr-help { font-size: .82rem; color: var(--on-dark-2); }
+.wr-result { display: grid; gap: 10px; animation: popIn .3s var(--ease); }
+.wr-result:focus { outline: none; }
+.wr-result h2 { color: #fff; }
+.wr-status { display: flex; align-items: center; gap: 10px; margin: 0; font-size: .85rem; color: var(--on-dark-2); }
+.wr-status.is-expired .badge { background: #3B1E1E; color: #FFB4AB; }
+.wr-sub { color: var(--on-dark-2); font-size: .93rem; margin: 0; }
+.wr-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 6px 0 0; }
+.wr-facts div { padding: 12px 14px; border-radius: var(--r-md); background: rgba(255, 255, 255, .06); }
+.wr-facts dt { font-size: .78rem; color: var(--on-dark-3); }
+.wr-facts dd { margin: 2px 0 0; font-weight: 700; color: #fff; }
+.wr-bar { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .12); overflow: hidden; margin-top: 6px; }
+.wr-bar span { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--amber); transition: width .9s var(--ease); }
+.wr-days { margin: 0; font-size: .88rem; color: var(--on-dark-2); }
+.wr-days strong { color: #fff; }
+.wr-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+@media (max-width: 1023px) {
+  .wr-claim { grid-template-columns: 1fr; }
+}
+@media (max-width: 767px) {
+  .wr-cover { grid-template-columns: 1fr; }
+  .wr-actions .btn { flex: 1 1 100%; }
+}

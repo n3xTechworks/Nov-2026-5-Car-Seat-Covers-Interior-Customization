@@ -1,0 +1,44 @@
+/* About (PDF 34-36) */
+.ab-principle { border-top: 2px solid var(--text); padding-top: 22px; row-gap: 10px; }
+.ab-principle h3 { font-size: clamp(1.3rem, 1.1rem + .6vw, 1.6rem); }
+.ab-principle p { color: var(--muted); }
+
+.ab-photos { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; }
+.ab-photo { margin: 0; }
+.ab-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-xl); background: var(--navy); }
+.ab-photo--wide img { aspect-ratio: 1.37 / 1; }
+.ab-photo:not(.ab-photo--wide) img { aspect-ratio: 1 / 1.026; }
+.ab-photo figcaption { margin-top: 12px; font-size: .88rem; color: var(--muted); }
+.ab-photo figcaption strong { color: var(--text); }
+.ab-stats { margin-top: clamp(32px, 4vw, 48px); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.ab-timeline { margin-top: 44px; }
+.section--dark .ab-timeline::before { background: linear-gradient(var(--amber), rgba(255, 255, 255, .18)); }
+.section--dark .ab-timeline .tl-year { box-shadow: 0 0 0 6px var(--navy); }
+.section--dark .ab-timeline .tl-body { background: rgba(255, 255, 255, .05); border-color: var(--dark-line); }
+.section--dark .ab-timeline .tl-body h3 { color: #fff; font-size: 1.1rem; }
+.section--dark .ab-timeline .tl-body p { color: var(--on-dark-2); }
+
+.ab-team-title { margin-bottom: clamp(24px, 3vw, 36px); }
+.ab-member { padding: 14px 14px 24px; row-gap: 6px; }
+.ab-face { border-radius: var(--r-md); overflow: hidden; aspect-ratio: 1 / 1; background: var(--surface-2); margin-bottom: 10px; }
+.ab-face img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; transition: transform .6s var(--ease); }
+.ab-member:hover .ab-face img { transform: scale(1.04); }
+.ab-member h3, .ab-member p { padding-inline: 8px; }
+.ab-member h3 { font-size: 1.15rem; }
+.ab-role { color: var(--amber-ink); font-weight: 700; font-size: .88rem; }
+.ab-member p:last-child { color: var(--muted); font-size: .92rem; }
+
+.ab-cta { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.ab-cta h2 { max-width: 14ch; font-size: clamp(2rem, 1.4rem + 2vw, 3rem); }
+.ab-cta .hero-ctas { margin: 0; flex-shrink: 0; }
+
+@media (max-width: 1023px) {
+  .ab-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .ab-photos { grid-template-columns: 1fr; }
+  .ab-photo img, .ab-photo--wide img, .ab-photo:not(.ab-photo--wide) img { aspect-ratio: 3 / 2; }
+  .ab-cta { flex-direction: column; align-items: flex-start; }
+  .ab-cta .hero-ctas { justify-content: flex-start; }
+}

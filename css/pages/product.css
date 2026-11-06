@@ -1,0 +1,33 @@
+/* product detail (generated product-<slug>.html, PDF 20-22, 53); shared detail styles live in css/site.css section 18 */
+.pd-band .pd-layout { margin-top: 4px; }
+.pd-main a:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; }
+.pd-main img { transition: transform .5s var(--ease); }
+.pd-main a:hover img { transform: scale(1.03); }
+.pd-buy { position: relative; }
+.pd-buy .btn-block { margin-top: 0; }
+.pd-details .checklist { padding: 22px 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); }
+.reviews-wrap .rating-summary { position: relative; }
+.mini-grid .mini-card { transition: transform .25s var(--ease), box-shadow .25s; }
+.mini-grid .mini-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.mini-title a::before { content: ""; position: absolute; inset: 0; z-index: 1; }
+
+/* sticky quote bar: phones only */
+.pd-bar { display: none; }
+@media (max-width: 767px) {
+  .pd-bar { position: fixed; z-index: 70; inset-inline: 0; bottom: 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--navy); border-top: 1px solid #1B2740; transition: transform .25s var(--ease); }
+  .pd-bar.is-hidden { transform: translateY(110%); }
+  .pd-bar-price { display: grid; line-height: 1.15; }
+  .pd-bar-price small { font-size: .78rem; color: var(--on-dark-3); }
+  .pd-bar-price strong { font: 800 1.35rem/1.1 var(--font-head); color: #fff; letter-spacing: -0.02em; }
+  .pd-bar .btn { flex: 1; max-width: 240px; }
+  body:has(.pd-bar:not(.is-hidden)) .wa-widget { bottom: 92px; }
+  body:has(.pd-bar) .site-footer { padding-bottom: 80px; }
+  .pd-main img { aspect-ratio: 4 / 3; }
+  .pd-title { font-size: 1.9rem; }
+  .tablist { display: flex; flex-wrap: nowrap; width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .tab { flex: 1 0 auto; padding: 0 10px; font-size: .86rem; white-space: nowrap; }
+  .reviews-wrap { gap: 22px; }
+  .review { padding: 16px; gap: 12px; }
+  .review-head .stars { margin-inline-start: 0; flex-basis: 100%; }
+}
+@media (max-width: 400px) { .tab { padding: 0 6px; font-size: .8rem; } }

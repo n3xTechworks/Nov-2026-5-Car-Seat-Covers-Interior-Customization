@@ -1,0 +1,114 @@
+
+  <!-- ===== Global components (src/partials/globals.html): car selector, callback modal, cookie banner, WhatsApp widget ===== -->
+  <div class="modal modal--car" id="carModal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog modal-dialog--lg" role="dialog" aria-modal="true" aria-labelledby="car-title" tabindex="-1">
+      <span class="sheet-handle" aria-hidden="true"></span>
+      <div class="modal-head">
+        <div><p class="eyebrow" data-car-step-label>Step 1 of 3</p><h2 class="modal-title" id="car-title" data-car-title>Which brand do you drive?</h2></div>
+        <button class="modal-x" type="button" data-modal-close aria-label="Close car selector"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="step-bars" aria-hidden="true"><span class="on" data-car-bar="1"></span><span data-car-bar="2"></span><span data-car-bar="3"></span></div>
+      <div class="modal-body">
+        <div data-car-step="1">
+          <label class="search-field"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><input type="search" placeholder="Search brand or model, e.g. Creta" data-car-search aria-label="Search brand or model" autocomplete="off"></label>
+          <div class="brand-grid" data-car-brands></div>
+          <div class="model-hits" data-car-hits hidden></div>
+          <p class="car-empty" data-car-empty hidden>No brand or model matches that. <a href="contact.html#message">Ask for a custom pattern</a>.</p>
+        </div>
+        <div data-car-step="2" hidden>
+          <p class="car-picked"><span class="badge badge--dark" data-car-brand-name></span> <button class="linklike" type="button" data-car-back>Change brand</button></p>
+          <fieldset class="car-fieldset"><legend class="sr-only">Model</legend><div class="model-grid" data-car-models></div></fieldset>
+          <fieldset class="car-fieldset" data-car-year-wrap hidden><legend class="car-legend">Year of manufacture</legend><div class="chip-row" data-car-years></div></fieldset>
+          <p class="car-note" data-car-note></p>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <div class="mf-step" data-car-foot="1">
+          <p class="muted">Brand not listed? <a class="link-amber" href="contact.html#message">Ask for a custom pattern</a></p>
+          <button class="btn btn-dark" type="button" data-car-next disabled>Next: model <svg class="flip" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="mf-step" data-car-foot="2" hidden>
+          <button class="linklike link-amber" type="button" data-car-back><svg class="flip" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back</button>
+          <span class="mf-right"><span class="pattern-status" data-car-status></span><button class="btn btn-dark" type="button" data-car-go disabled>Choose a model and year</button></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="callbackModal" hidden>
+    <div class="modal-backdrop" data-modal-close></div>
+    <div class="modal-dialog modal-dialog--sm" role="dialog" aria-modal="true" aria-labelledby="cb-title" tabindex="-1">
+      <div data-cb-form-wrap>
+        <div class="modal-head">
+          <div><p class="eyebrow">Free · No obligation</p><h2 class="modal-title" id="cb-title">We'll call you back</h2></div>
+          <button class="modal-x" type="button" data-modal-close aria-label="Close"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </div>
+        <form class="form-stack" id="callbackForm" data-validate data-no-reset novalidate>
+          <div class="field"><label for="cb-name">Full name <span aria-hidden="true">*</span></label><input id="cb-name" name="name" type="text" autocomplete="name" placeholder="e.g. Karthik V" required></div>
+          <div class="field"><label for="cb-phone">Mobile number <span aria-hidden="true">*</span></label><div class="input-prefix"><span>+91</span><input id="cb-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" required></div></div>
+          <fieldset class="field"><legend>When should we call?</legend>
+            <div class="chip-row">
+              <label class="chip chip--radio"><input type="radio" name="when" value="In 15 minutes" checked><span>In 15 minutes</span></label>
+              <label class="chip chip--radio"><input type="radio" name="when" value="This evening"><span>This evening</span></label>
+              <label class="chip chip--radio"><input type="radio" name="when" value="Tomorrow morning"><span>Tomorrow morning</span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="cb-about">About</label>
+            <select id="cb-about" name="about">
+              <option>Seat covers quote</option><option>Cabin makeover</option><option>Steering wrap or mats</option><option>Fleet pricing (5+ cars)</option><option>Warranty claim</option><option>Something else</option>
+            </select>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Request callback</button>
+          <p class="form-note">Studio hours only. Outside hours we call at 9:30 am next working day.</p>
+        </form>
+      </div>
+      <div class="done-state" data-cb-done hidden>
+        <span class="done-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="m5 12.5 4.5 4.5L19 7"/></svg></span>
+        <h2 class="modal-title" tabindex="-1" data-cb-done-title>Done. Expect our call shortly.</h2>
+        <p>We'll call <strong data-cb-number>+91 98940 12345</strong> <span data-cb-when>within 15 minutes</span> from <strong class="ltr-num">+91 98765 43210</strong>. Save the number so you know it's us.</p>
+        <p class="badge badge--light" data-cb-ref>Reference HX-C-1193</p>
+        <button class="btn btn-dark btn-block" type="button" data-modal-close>Close</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="cookie-banner" data-cookie hidden aria-labelledby="cookie-title">
+    <h2 id="cookie-title">We use a few cookies</h2>
+    <p>Essential cookies keep your car selection and quote draft. Analytics help us improve the site. You can change this any time in <a href="privacy.html#cookies">Privacy</a>.</p>
+    <div class="cookie-opts">
+      <label class="switch-row"><span><strong>Essential</strong> · always on</span><input type="checkbox" checked disabled class="switch"></label>
+      <label class="switch-row"><span><strong>Analytics</strong></span><input type="checkbox" class="switch" data-cookie-analytics checked></label>
+    </div>
+    <div class="cookie-actions"><button class="btn btn-primary" type="button" data-cookie-accept>Accept all</button><button class="btn btn-secondary" type="button" data-cookie-save>Save my choice</button></div>
+  </section>
+
+  <div class="wa-widget" data-wa>
+    <section class="wa-panel" id="waPanel" hidden aria-labelledby="wa-title">
+      <header class="wa-head">
+        <span class="wa-avatar" aria-hidden="true">HX<span class="wa-online"></span></span>
+        <div><h2 id="wa-title">Hexstitch Studio</h2><p>Typically replies in 10 minutes</p></div>
+        <button class="modal-x wa-x" type="button" data-wa-close aria-label="Close chat"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </header>
+      <div class="wa-body">
+        <p class="wa-bubble" data-wa-greeting>Hi! Ask us anything about seat covers or cabin makeovers, or send a photo of your seats for a quick check.</p>
+        <p class="wa-label">Quick questions</p>
+        <div class="wa-quick">
+          <button type="button" data-wa-q>Do you have a pattern for my car?</button>
+          <button type="button" data-wa-q>Can I see swatches first?</button>
+          <button type="button" data-wa-q>What is the earliest fitting slot?</button>
+        </div>
+      </div>
+      <form class="wa-form" data-wa-form data-validate data-no-reset novalidate>
+        <label class="sr-only" for="wa-msg">Your message</label>
+        <input id="wa-msg" type="text" placeholder="Type a message" data-wa-input autocomplete="off">
+        <a class="btn btn-wa" href="https://wa.me/919876543210" target="_blank" rel="noopener" data-wa-open>Open WhatsApp</a>
+      </form>
+    </section>
+    <button class="wa-fab" type="button" aria-expanded="false" aria-controls="waPanel" aria-label="Chat with us on WhatsApp" data-wa-toggle>
+      <svg class="i-wa" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M4 20l1.2-4.1A8 8 0 1 1 8.3 19z"/><path d="M9 8.6c.2-.5.6-.6.9-.6h.4c.2 0 .4.1.5.4l.6 1.5c.1.2 0 .5-.1.6l-.5.6c.4.9 1.3 1.8 2.3 2.3l.6-.5c.2-.2.4-.2.6-.1l1.5.7c.2.1.3.3.3.5v.4c0 .4-.2.8-.6.9-1.8.6-6.2-2.4-6.5-5.1 0-.6.2-1.1.5-1.6"/></svg>
+      <svg class="i-x" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+</body>
+</html>

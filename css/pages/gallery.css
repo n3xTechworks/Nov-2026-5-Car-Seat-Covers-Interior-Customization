@@ -1,0 +1,43 @@
+/* Gallery (PDF 29-30): filter bar, featured project, masonry grid */
+.gl-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+.gl-bar .chip span { opacity: .75; margin-inline-start: 2px; }
+.gl-select { display: flex; align-items: center; gap: 10px; }
+.gl-select label { font-size: .88rem; color: var(--muted); }
+.gl-select select { height: 40px; padding: 0 36px 0 14px; border-radius: var(--r-sm); border: 1px solid var(--line-2); background-color: var(--surface); color: var(--text); font: 700 .88rem/1 var(--font-body); }
+.gl-count { margin: 14px 0 18px; font-size: .88rem; color: var(--muted); }
+
+.feature-project { margin-bottom: 18px; transition: opacity .3s var(--ease); }
+.fp-media { display: block; overflow: hidden; min-height: 420px; }
+.fp-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.feature-project:hover .fp-media img { transform: scale(1.03); }
+.fp-title { margin-top: 16px; color: #fff; font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem); }
+.fp-title a { color: inherit; text-decoration: none; }
+.fp-title a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.fp-facts { margin-bottom: 0; }
+.fp-facts dt, .fp-facts dd { margin: 0; }
+
+/* masonry: js/pages/gallery.js deals visible cards round-robin into .gl-col columns (row order kept); photos alternate tall/short like the PDF */
+.project-grid.is-masonry { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 18px; align-items: start; }
+.gl-col { display: flex; flex-direction: column; gap: 26px; min-width: 0; }
+.gl-col .project-card { display: block; }
+.gl-col .pj-media { display: block; }
+.gl-col .pj-media img { width: 100%; height: auto; object-fit: cover; }
+.gl-col:nth-child(odd) .project-card:nth-child(odd) .pj-media img, .gl-col:nth-child(even) .project-card:nth-child(even) .pj-media img { aspect-ratio: 1 / 1.05; }
+.gl-col:nth-child(odd) .project-card:nth-child(even) .pj-media img, .gl-col:nth-child(even) .project-card:nth-child(odd) .pj-media img { aspect-ratio: 4 / 3; }
+.project-card.is-hidden, .feature-project.is-hidden { display: none; }
+
+.gl-empty { padding: 36px 24px; text-align: center; border: 1px dashed var(--line-2); border-radius: var(--r-lg); background: var(--surface); }
+.gl-empty p { color: var(--text-2); max-width: 52ch; margin: 0 auto; }
+.gl-empty-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 18px; }
+
+@media (max-width: 1023px) {
+  .fp-media { min-height: 0; }
+}
+@media (max-width: 767px) {
+  .gl-col .project-card .pj-media img { aspect-ratio: 3 / 2 !important; }
+  .gl-bar { flex-direction: column; align-items: stretch; }
+  .gl-bar .chips { flex-wrap: wrap; overflow: visible; padding-bottom: 0; }
+  .gl-bar .chip { flex-shrink: 0; }
+  .gl-select select { flex: 1; min-width: 0; }
+  .gl-bar > * { min-width: 0; max-width: 100%; }
+}
