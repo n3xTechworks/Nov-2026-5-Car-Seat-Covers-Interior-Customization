@@ -33,7 +33,7 @@
     var list = $('[data-pf-list="' + g + '"]');
     list.innerHTML = Object.keys(GROUPS[g]).map(function (k) {
       var id = 'f-' + g + '-' + k;
-      return '<label class="pf-check" for="' + id + '"><input type="checkbox" id="' + id + '" name="' + g + '" value="' + k + '"' + (g === 'category' ? ' checked' : '') + '>' +
+      return '<label class="pf-check" for="' + id + '"><input type="checkbox" id="' + id + '" name="' + g + '" value="' + k + '"' + '' + '>' +
         '<span class="pf-label"><span class="pf-long">' + HX.esc(GROUPS[g][k]) + '</span><span class="pf-short">' + HX.esc(SHORT[k] || GROUPS[g][k]) + '</span></span><span class="pf-n">' + countFor(g, k) + '</span></label>';
     }).join('');
   });
@@ -41,14 +41,15 @@
   /* ---------- state ---------- */
   var rMin = $('[data-range-min]'), rMax = $('[data-range-max]');
   function checked(g) { return $$('input[name="' + g + '"]:checked', form).map(function (i) { return i.value; }); }
-  function allCats() { return checked('category').length === Object.keys(GROUPS.category).length; }
+  /* no category ticked = all categories (same as material and pattern), so "Clear all" really clears the boxes */
+  function allCats() { var n = checked('category').length; return n === 0 || n === Object.keys(GROUPS.category).length; }
   function state() {
     var lo = Math.min(+rMin.value, +rMax.value), hi = Math.max(+rMin.value, +rMax.value);
     return { cats: checked('category'), mats: checked('material'), pats: checked('pattern'), lo: lo, hi: hi };
   }
   function matches(card, s) {
     var cat = card.getAttribute('data-category'), mats = (card.getAttribute('data-materials') || '').split(' '), pat = card.getAttribute('data-pattern'), price = +card.getAttribute('data-price');
-    if (s.cats.indexOf(cat) < 0) return false;
+    if (s.cats.length && s.cats.indexOf(cat) < 0) return false;
     if (s.mats.length && !s.mats.some(function (m) { return mats.indexOf(m) > -1; })) return false;
     if (s.pats.length && s.pats.indexOf(pat) < 0) return false;
     if (price < s.lo || price > s.hi) return false;
@@ -132,14 +133,14 @@
     if (k === 'car') { HX.store('hexstitch-car', ''); history.replaceState(null, '', 'products.html'); renderCar(); }
     else if (k === 'cats') { /* "All categories" chip: nothing narrower to remove */ HX.toast('Untick a category in the filters to narrow the list', 'info'); return; }
     else if (k === 'price') { rMin.value = MIN; rMax.value = MAX; }
-    else if (k === 'category') { var cb = form.querySelector('input[name="category"][value="' + v + '"]'); cb.checked = false; if (!checked('category').length) setAllCats(true); }
+    else if (k === 'category') { var cb = form.querySelector('input[name="category"][value="' + v + '"]'); cb.checked = false; }
     else { var x = form.querySelector('input[name="' + k + '"][value="' + v + '"]'); if (x) x.checked = false; }
     apply();
   });
 
   function setAllCats(on) { $$('input[name="category"]', form).forEach(function (i) { i.checked = on; }); }
   function clearAll() {
-    setAllCats(true);
+    setAllCats(false);
     $$('input[name="material"], input[name="pattern"]', form).forEach(function (i) { i.checked = false; });
     rMin.value = MIN; rMax.value = MAX;
     expanded = false;
@@ -151,7 +152,7 @@
   $('[data-pr-catchips]').addEventListener('click', function (e) {
     var b = e.target.closest('[data-cat]'); if (!b) return;
     var k = b.getAttribute('data-cat');
-    if (k === 'all') setAllCats(true);
+    if (k === 'all') setAllCats(false);
     else $$('input[name="category"]', form).forEach(function (i) { i.checked = i.value === k; });
     expanded = false; apply();
   });
@@ -166,6 +167,9 @@
 
   /* ---------- car: heading, car card, no-pattern state ---------- */
   var params = new URLSearchParams(location.search);
+  /* ?category=seat-covers (links from the Home category cards) pre-ticks that category */
+  var qCat = params.get('category');
+  if (qCat && GROUPS.category[qCat]) { var qBox = form.querySelector('input[name="category"][value="' + qCat + '"]'); if (qBox) qBox.checked = true; }
   var qCar = params.get('car');
   if (qCar) {
     var found = HX.findCar(qCar);

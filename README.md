@@ -26,6 +26,7 @@ bash tests/run-tests.sh            # build + validator unit tests + full-site QA
 bash tests/run-tests.sh --quick
 node tests/qa.cjs . --pages index.html
 ```
+QA needs Playwright: `npm i -D playwright && npx playwright install chromium`, or set `PLAYWRIGHT_PATH=/path/to/node_modules/playwright`.
 `tests/validation.test.js` covers name / email / 10-digit mobile / PIN / date rules. `tests/qa.cjs` checks the client checklist on every page:
 one h1, logo -> home, nav order (Home, About, Products, Gallery, Blog, Contact), CTA -> quote.html, no login/dashboard, theme/RTL/CTA once and equal size,
 footer icons/socials/Privacy/Terms, only the navbar sticky, hero overlay and max 2 CTAs, equal inner-hero heights, level card rows, no image reuse,

@@ -48,8 +48,8 @@
           <li class="has-sub">
             <button class="nav-link" type="button" aria-expanded="false" aria-controls="home-sub">Home <svg class="chev" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
             <ul class="submenu" id="home-sub">
-              <li><a href="index.html" ><span class="sm-eyebrow">Home 1</span><span class="sm-title">Seat covers</span><span class="sm-sub">Cut to your car's exact pattern</span></a></li>
-              <li><a href="home-2.html" ><span class="sm-eyebrow">Home 2</span><span class="sm-title">Cabin makeovers</span><span class="sm-sub">Seats, steering, roof, lights</span></a></li>
+              <li><a href="index.html" ><span class="sm-eyebrow">Made to measure</span><span class="sm-title">Seat covers</span><span class="sm-sub">Cut to your car's exact pattern</span></a></li>
+              <li><a href="home-2.html" ><span class="sm-eyebrow">Full interior</span><span class="sm-title">Cabin makeovers</span><span class="sm-sub">Seats, steering, roof, lights</span></a></li>
             </ul>
           </li>
           <li><a class="nav-link" href="about.html" >About</a></li>
@@ -76,8 +76,8 @@
         <details class="mm-home">
           <summary>Home <svg class="chev" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
           <ul>
-            <li><a href="index.html" ><span class="sm-title">Home 1 · Seat covers</span><span class="sm-sub">Cut to your car's exact pattern</span></a></li>
-            <li><a href="home-2.html" ><span class="sm-title">Home 2 · Cabin makeovers</span><span class="sm-sub">Seats, steering, roof, lights</span></a></li>
+            <li><a href="index.html" ><span class="sm-title">Seat covers</span><span class="sm-sub">Cut to your car's exact pattern</span></a></li>
+            <li><a href="home-2.html" ><span class="sm-title">Cabin makeovers</span><span class="sm-sub">Seats, steering, roof, lights</span></a></li>
           </ul>
         </details>
         <ul class="mm-list">
@@ -113,8 +113,14 @@
         <h2 id="articles-title" class="h2-sm">Latest articles</h2>
         <p class="blog-count" id="blogCount" aria-live="polite">Showing all 7 articles</p>
       </div>
+      <div class="blog-search" role="search">
+        <label class="sr-only" for="blogSearch">Search articles</label>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="blogSearch" type="search" placeholder="Search articles, e.g. airbags or nappa" autocomplete="off" enterkeyhint="search">
+      </div>
       <div class="chips blog-chips" role="group" aria-label="Filter articles by topic"><button class="chip" type="button" data-blog-filter="all" aria-pressed="true">All topics</button><button class="chip" type="button" data-blog-filter="materials" aria-pressed="false">Materials</button><button class="chip" type="button" data-blog-filter="safety" aria-pressed="false">Safety</button><button class="chip" type="button" data-blog-filter="care" aria-pressed="false">Care</button><button class="chip" type="button" data-blog-filter="accessories" aria-pressed="false">Accessories</button><button class="chip" type="button" data-blog-filter="upgrades" aria-pressed="false">Cabin upgrades</button><button class="chip" type="button" data-blog-filter="family" aria-pressed="false">Family cars</button></div>
     </div>
+    <p class="blog-empty" id="blogEmpty" hidden>No articles match your search. Try another word or choose All topics.</p>
     <div class="blog-feature-wrap" id="blogFeature">
 <article class="blog-card blog-card--feature" data-group="materials">
   <img class="blog-cover" src="images/blog-1-1600.webp" srcset="images/blog-1-800.webp 800w, images/blog-1-1600.webp 1600w" sizes="(min-width: 1024px) 50vw, 100vw" width="1600" height="1067" alt="Swatches of leatherette, fabric and perforated material laid out on a cutting table" loading="lazy" decoding="async">
@@ -208,8 +214,8 @@
       <nav class="f-col" aria-labelledby="f-explore">
         <h2 id="f-explore">Explore</h2>
         <ul>
-          <li><a href="index.html">Home 1 · Seat covers</a></li>
-          <li><a href="home-2.html">Home 2 · Cabin makeovers</a></li>
+          <li><a href="index.html">Seat covers</a></li>
+          <li><a href="home-2.html">Cabin makeovers</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="products.html">Products</a></li>
           <li><a href="gallery.html">Gallery</a></li>
@@ -238,7 +244,6 @@
         </ul>
       </div>
     </div>
-    <div class="container footer-word" aria-hidden="true">hexstitch</div>
     <div class="container footer-bottom">
       <p>&copy; <span data-year>2026</span> Hexstitch Auto Interiors</p>
       <ul class="f-legal">

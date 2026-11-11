@@ -193,3 +193,17 @@
   .slot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .book-actions { grid-template-columns: 1fr; }
 }
+
+/* ---------- Home 2 hero: its own look (Home 1 = cool dark, outlined pill; Home 2 = warm cognac tint, amber badge, surface pills) ---------- */
+.hero--inset .hero-shade,
+[data-theme="dark"] .hero--inset .hero-shade {
+  background: radial-gradient(ellipse 70% 60% at 50% 45%, rgba(38, 20, 8, .42) 0%, rgba(38, 20, 8, .2) 70%),
+              linear-gradient(180deg, rgba(24, 13, 5, .55) 0%, rgba(24, 13, 5, .5) 45%, rgba(24, 13, 5, .82) 100%);
+}
+.hero--inset .h2-eyebrow { display: inline-block; padding: 7px 16px; border-radius: 999px; background: var(--amber); color: #1A1206; letter-spacing: .14em; }
+.hero--inset h1 em { font-style: normal; color: var(--amber); }
+.surface-pills { list-style: none; margin: 26px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.surface-pills li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; font-size: .88rem; font-weight: 600; color: #fff;
+  background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+.surface-pills li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); flex: none; }
+@media (max-width: 559px) { .surface-pills { gap: 8px; } .surface-pills li { font-size: .8rem; padding: 6px 11px; } }

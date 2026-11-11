@@ -14,27 +14,9 @@
   var grid = grids[grids.length - 1];
   grids.slice(0, -1).forEach(function (g) { Array.prototype.slice.call(g.children).reverse().forEach(function (c) { grid.insertBefore(c, grid.firstChild); }); g.remove(); });
   var cards = grid ? Array.prototype.slice.call(grid.querySelectorAll('.project-card')) : [];
-  var lastCols = 0;
 
-  // masonry: deal the visible cards round-robin into N columns so rows read left to right and columns stay balanced
-  function layout(force) {
-    if (!grid) return;
-    var w = window.innerWidth, n = w < 768 ? 1 : w < 1024 ? 2 : 3;
-    if (n === lastCols && !force) return;
-    lastCols = n;
-    grid.classList.add('is-masonry');
-    grid.setAttribute('data-align-free', '');
-    grid.style.setProperty('--cols', n);
-    var cols = [];
-    for (var i = 0; i < n; i++) { var c = document.createElement('div'); c.className = 'gl-col'; cols.push(c); }
-    var k = 0;
-    cards.forEach(function (card) { if (!card.classList.contains('is-hidden')) { cols[k % n].appendChild(card); k++; } });
-    cards.forEach(function (card) { if (card.classList.contains('is-hidden')) cols[0].appendChild(card); });
-    grid.textContent = '';
-    cols.forEach(function (c) { grid.appendChild(c); });
-  }
-  var rt;
-  window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(function () { layout(false); }, 120); });
+  // uniform grid (no masonry): equal cards in full rows, so there are no empty gaps; CSS sets 4 / 2 / 1 columns
+  function layout() { if (grid) grid.classList.add('gl-uniform'); }
 
   // counts per body type on the chips (respecting the material filter)
   function labelChips() {
@@ -58,7 +40,7 @@
     countEl.textContent = 'Showing ' + shown + ' of ' + gridItems().length + ' projects';
     empty.hidden = shown > 0;
     labelChips();
-    layout(true);
+    layout();
     if (push && history.replaceState) {
       var q = [];
       if (body !== 'all') q.push('body=' + body);

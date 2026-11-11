@@ -1,4 +1,4 @@
-/* Gallery (PDF 29-30): filter bar, featured project, masonry grid */
+/* Gallery (PDF 29-30): filter bar, featured project, uniform project grid */
 .gl-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
 .gl-bar .chip span { opacity: .75; margin-inline-start: 2px; }
 .gl-select { display: flex; align-items: center; gap: 10px; }
@@ -41,3 +41,9 @@
   .gl-select select { flex: 1; min-width: 0; }
   .gl-bar > * { min-width: 0; max-width: 100%; }
 }
+
+/* uniform project grid: equal photos in full rows (8 projects = 2 rows of 4 on desktop), no masonry gaps */
+.project-grid.gl-uniform { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 18px; }
+.gl-uniform .pj-media img { aspect-ratio: 4 / 3; width: 100%; height: auto; object-fit: cover; }
+@media (max-width: 1099px) { .project-grid.gl-uniform { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 559px) { .project-grid.gl-uniform { grid-template-columns: minmax(0, 1fr); } }

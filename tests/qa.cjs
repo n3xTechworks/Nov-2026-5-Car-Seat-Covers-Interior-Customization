@@ -16,7 +16,8 @@
  */
 const path = require('path');
 const fs = require('fs');
-const { chromium } = require('/private/tmp/claude-501/-Users-selvamm-Desktop-15WebSites-Project-7-Error-Cleared-Webpage/511983cb-1d28-48e6-91ce-fdd565d95b6d/scratchpad/entwork/ctools/node_modules/playwright');
+// Playwright: set PLAYWRIGHT_PATH to a local install, otherwise the normal 'playwright' package is used
+const { chromium } = require(process.env.PLAYWRIGHT_PATH || 'playwright');
 
 const args = process.argv.slice(2);
 const SITE = path.resolve(args.find(a => !a.startsWith('--')) || '.');
@@ -35,7 +36,7 @@ const APP = [];
 const FORBIDDEN = ['login.html', 'signup.html', 'dashboard.html'];
 const ALL = [...PUBLIC, ...FLOW];
 const PAGES = ONLY ? ALL.filter(p => ONLY.includes(p)) : ALL;
-const HERO_PAGES = ['about.html', 'gallery.html', 'warranty.html', 'blog.html', 'contact.html'];
+const HERO_PAGES = ['about.html', 'products.html', 'gallery.html', 'warranty.html', 'blog.html', 'contact.html'];
 const NAV = ['Home', 'About', 'Products', 'Gallery', 'Blog', 'Contact'];
 const WIDTHS = QUICK ? [360, 768, 1024, 1440] : [360, 390, 768, 900, 1024, 1180, 1280, 1440];
 // every photo lives on ONE page. Exceptions: blog-N + author-N (blog.html + blog-post-N.html);

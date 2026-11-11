@@ -36,3 +36,17 @@
   .blog-card--feature .excerpt { padding: 10px 22px 0; }
   .blog-card--feature .byline { padding: 18px 22px 22px; }
 }
+
+/* toolbar: heading + search on one line, topic chips below */
+.blog-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); grid-template-areas: "head search" "chips chips"; align-items: end; gap: 18px 24px; }
+.blog-toolbar > div:first-child { grid-area: head; }
+.blog-search { grid-area: search; position: relative; }
+.blog-search svg { position: absolute; inset-inline-start: 16px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.blog-search input { width: 100%; height: 48px; padding-inline: 46px 16px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); color: var(--text); font: inherit; font-size: .95rem; }
+.blog-search input::placeholder { color: var(--muted); opacity: 1; }
+.blog-search input:hover { border-color: var(--amber); }
+.blog-search input:focus-visible { outline: 3px solid var(--amber); outline-offset: 2px; }
+.blog-toolbar .blog-chips { grid-area: chips; justify-content: flex-start; }
+.blog-empty { margin-bottom: 24px; padding: 28px 20px; text-align: center; color: var(--text-2); border: 1px dashed var(--line-2); border-radius: var(--r-lg); background: var(--surface); }
+.blog-empty[hidden] { display: none; }
+@media (max-width: 767px) { .blog-toolbar { grid-template-columns: minmax(0, 1fr); grid-template-areas: "head" "search" "chips"; } }

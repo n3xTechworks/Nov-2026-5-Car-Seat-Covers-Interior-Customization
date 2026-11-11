@@ -1,6 +1,7 @@
 /* products page (PDF 16-19, 51-52) */
-.pr-band { padding-bottom: 24px; }
-.pr-titlebar { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-top: 10px; }
+/* car bar under the page hero: the picked car (or a prompt) on one aligned line */
+.pr-band { padding-block: clamp(24px, 3vw, 32px) 20px; }
+.pr-titlebar { display: flex; align-items: center; justify-content: flex-end; gap: 24px; flex-wrap: wrap; }
 .pr-titlebar h1 { max-width: 15ch; font-size: clamp(2.1rem, 1.2rem + 3vw, 3.6rem); line-height: 1.02; }
 .pr-car { display: flex; align-items: center; gap: 16px; padding: 12px 12px 12px 20px; border-radius: var(--r-lg); margin-bottom: 4px; }
 [dir="rtl"] .pr-car { padding: 12px 20px 12px 12px; }
@@ -177,3 +178,7 @@
   .pr-grid-wrap .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 10px; }
   .pr-grid-wrap .dots li { width: 14px; height: 14px; }
 }
+
+/* car bar spans the full row under the hero: car on the left, action on the right */
+.pr-band .pr-car { flex: 1 1 100%; margin-bottom: 0; }
+.pr-band .pr-car-text { margin-inline-end: auto; }

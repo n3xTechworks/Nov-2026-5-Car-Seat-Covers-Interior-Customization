@@ -1,7 +1,7 @@
 /* project detail page styles live in css/site.css section 18 */
 
-/* owner quote: initials avatar must keep dark-on-amber (the generic .person span colour would grey it out) */
-.owner-quote .person .avatar { color: var(--on-amber); }
+/* owner quote: profile photo of the car owner */
+.owner-quote .person .owner-photo { flex: none; width: 56px; height: 56px; }
 .more-card .more-media img { transition: transform .6s var(--ease); }
 .more-card:hover .more-media img { transform: scale(1.04); }
 .pj-ph--more .pj-more { transition: background-color .3s; }

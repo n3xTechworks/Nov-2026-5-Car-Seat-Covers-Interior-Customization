@@ -27,10 +27,12 @@ project photos may appear on gallery.html and in "More projects" on other galler
 | hero-about | about.html | inner hero |
 | about-studio, about-materials | about.html | studio photos |
 | team-1, team-2, team-3, team-4 | about.html | team: founder, head tailor, fitting lead, customer care |
+| hero-products | products.html | inner hero (Unsplash, free licence) |
 | hero-warranty | warranty.html | inner hero |
 | hero-contact | contact.html | inner hero |
 | hero-blog | blog.html | inner hero |
 | blog-1 ... blog-7 | blog.html + blog-post-N.html | covers (1 materials, 2 airbag-safe, 3 leather care, 4 floor mats, 5 ambient lighting, 6 7-seater cabins, 7 monsoon care) |
 | author-1 ... author-7 | blog.html + blog-post-N.html | authors (1-4 men, 5-7 women by slot brief; check the photo) |
+| owner-1 ... owner-8 | gallery-<slug>.html (project n) | owner photo in the project quote (Unsplash portraits, free licence) |
 
 Pages without photos: quote.html (product thumb only), privacy.html, terms.html, 404.html (dark quilt hero).

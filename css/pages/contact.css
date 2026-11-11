@@ -1,5 +1,6 @@
 /* contact page (PDF 39-40, 56) */
-.contact-cards-wrap { position: relative; z-index: 2; margin-top: -76px; }
+/* sits below the hero (no overlap onto the hero photo) */
+.contact-cards-wrap { position: relative; z-index: 2; margin-top: clamp(28px, 4vw, 48px); }
 .contact-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .contact-card { display: grid; grid-template-rows: auto auto 1fr; gap: 4px; text-align: start; padding: 18px 20px 20px; border-radius: var(--r-lg); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-md); color: var(--text); font: inherit; cursor: pointer; transition: transform .25s var(--ease), box-shadow .25s; min-width: 0; }
 .contact-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
@@ -40,7 +41,6 @@
   .contact-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
-  .contact-cards-wrap { margin-top: -56px; }
   .contact-cards { gap: 10px; }
   .contact-card { padding: 14px 12px 16px; }
   .cc-value { font-size: .95rem; }

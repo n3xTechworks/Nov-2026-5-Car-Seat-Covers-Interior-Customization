@@ -265,7 +265,8 @@ body.modal-open { overflow: hidden; }
 
 /* ---------- 6. Home 1 blocks ---------- */
 /* fit bar: overlaps the hero bottom */
-.fit-bar-wrap { position: relative; z-index: 3; margin-top: -64px; }
+/* sits below the hero (no overlap onto the hero photo) */
+.fit-bar-wrap { position: relative; z-index: 3; margin-top: clamp(28px, 4vw, 48px); }
 .fit-bar { display: grid; grid-template-columns: minmax(200px, 1.1fr) repeat(3, minmax(0, 1fr)) auto; gap: 12px; align-items: center; padding: 18px 18px 18px 26px; background: var(--surface); border-radius: var(--r-xl); box-shadow: var(--shadow-lg); border: 1px solid var(--line); }
 [dir="rtl"] .fit-bar { padding: 18px 26px 18px 18px; }
 .fit-bar h2 { font-size: 1.2rem; letter-spacing: -0.02em; }
@@ -838,7 +839,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
   [dir="rtl"] .fit-bar { padding: 20px; }
   .fit-bar-title { grid-column: 1 / -1; }
   .fit-bar .btn { grid-column: 1 / -1; min-height: 54px; }
-  .fit-bar-wrap { margin-top: -80px; }
 }
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1042,12 +1042,23 @@ figure { margin: 0; }
 .footer-grid { gap: 24px; }
 .footer-word { font-size: clamp(3.4rem, 10vw, 8.5rem); margin-top: clamp(18px, 2.4vw, 28px); line-height: .8; }
 .footer-bottom { padding-block: 14px 18px; }
-/* Footer: explore links in two short columns so the footer is shorter */
-@media (min-width: 640px) { .site-footer .footer-grid > :nth-child(2) ul { columns: 2; column-gap: 24px; } .site-footer .footer-grid > :nth-child(2) li { break-inside: avoid; } }
 .fit-split .photo-card img { aspect-ratio: 1 / 1; }
-@media (min-width: 640px) { .site-footer .f-col:has(#f-explore) ul { grid-template-columns: 1fr 1fr; column-gap: 20px; } }
 
 /* RTL/LTR toggle: text label like site 15, shows the direction you switch TO */
 .dir-txt{font-family:var(--f-body,inherit);font-weight:800;font-size:.8125rem;letter-spacing:.04em;line-height:1}
 .d-to-ltr,html[dir="rtl"] .d-to-rtl{display:none}
 html[dir="rtl"] .d-to-ltr{display:inline}
+
+/* ---------- Footer redesign: one aligned row of columns (no giant wordmark) ---------- */
+.footer-grid { grid-template-columns: 1.3fr .8fr 1fr 1.2fr; gap: 32px; }
+.f-col ul { margin-top: 10px; }
+@media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; row-gap: 36px; } }
+@media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
+
+/* Dropdown lists: give every <option> its own colours so the open list is readable in dark mode
+   (selects have a transparent background, so on Windows the list showed light text on a white panel) */
+select option, select optgroup { background-color: var(--surface); color: var(--text); }
+select option:disabled { color: var(--muted); }
+/* bottom row divider follows the content edges (not the container padding) */
+.footer-bottom { border-top: 0; position: relative; margin-top: clamp(32px, 4vw, 44px); }
+.footer-bottom::before { content: ""; position: absolute; top: 0; inset-inline: var(--gutter); height: 1px; background: #1B2740; }
