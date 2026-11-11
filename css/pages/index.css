@@ -1,1 +1,16 @@
 /* index page styles */
+
+/* Every set includes */
+.incl-card h3 { font-size: 1.125rem; }
+.incl-card .icon-tile { margin-bottom: 6px; }
+
+/* Patterns on file: brand grid (4 -> 3 -> 2 -> 1) */
+.brand-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.brand-grid li { display: grid; align-content: start; gap: 6px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-md); min-width: 0; }
+.brand-grid strong { font-weight: 700; color: var(--text); }
+.brand-grid span { font-size: .9rem; line-height: 1.5; color: var(--muted); }
+.brand-grid .brand-more { background: var(--surface-2); border: 1.5px dashed var(--line-2); }
+.brand-grid .brand-more strong { color: var(--amber-ink); }
+@media (max-width: 1024px) { .brand-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 767px) { .brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 479px) { .brand-grid { grid-template-columns: minmax(0, 1fr); } }

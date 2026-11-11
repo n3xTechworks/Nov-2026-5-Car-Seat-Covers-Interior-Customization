@@ -207,3 +207,12 @@
   background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .28); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 .surface-pills li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); flex: none; }
 @media (max-width: 559px) { .surface-pills { gap: 8px; } .surface-pills li { font-size: .8rem; padding: 6px 11px; } }
+
+/* Recent makeovers (dark section, text cards) */
+.recent-card { display: grid; align-content: start; }
+.recent-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: .875rem; font-weight: 600; color: var(--on-dark-2); }
+.recent-card h3 { font-size: 1.125rem; line-height: 1.35; }
+.recent-card h3 a { color: inherit; text-decoration: none; }
+.recent-card h3 a:hover, .recent-card h3 a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+.recent-card p:not(.recent-top) { font-size: .9375rem; line-height: 1.55; }
+.recent-meta { padding-top: 12px; border-top: 1px solid var(--dark-line); font-weight: 600; color: var(--amber) !important; }
